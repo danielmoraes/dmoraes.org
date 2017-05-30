@@ -1,0 +1,34 @@
+title: Daniel Bastos Moraes
+author: Daniel Bastos Moraes
+email: daniel.b.moraes@gmail.com
+description: >
+  Daniel Moraes is a data scientist and web developer. He likes playing with
+  algorithms and machine learning in the spare time.
+baseurl: ""
+url: "http://dmoraes.org"
+github_username:  danielmoraes
+
+# build settings
+markdown: kramdown
+theme: jekyll-whiteglass
+gems:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# google analytics
+google_analytics: UA-29245487-1
+
+# gems settings
+permalink: /blog/:year/:month/:day/:title/
+paginate_path: /blog/posts/:num/
+paginate: 5
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category_archives
+  permalinks:
+    category: /blog/categories/:name/
