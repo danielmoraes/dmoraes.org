@@ -19,6 +19,14 @@ My solutions for the problems from Introdution to Algorithms, Third Edition.
 Read the [PDF](http://clrs.dmoraes.org). The
 [source code](https://goo.gl/zBEAp6) is also available on GitHub.
 
+#### [Solutions to Elements of Programming Interviews](https://github.com/danielmoraes/epi)
+
+**Algorithms** <sub><sup>(Feb 2017 – Present)</sup></sub>
+
+My solutions for the problems from Elements of Programming Interviews, Second Edition.
+
+The [source code](https://github.com/danielmoraes/epi) is available on GitHub.
+
 ### Research Projects
 
 #### [Crowd Detection with BinBoost Descriptors](http://dmoraes.org/papers/mo446a-2014-project.pdf)
@@ -141,4 +149,4 @@ An HTML spider to collect laptops data in real-time from Google Shopping and
 Buscapé. Collected and refined data of 495,000 offers from 34,000 laptops during 7 months.
 
 Read the [paper](/papers/spider_google_shopping.pdf) (brazilian portuguese).
-The [source code](https://goo.gl/6irc9P) is available on GitHub.
+The [source code](https://goo.gl/6irc9P) is also available on GitHub.
