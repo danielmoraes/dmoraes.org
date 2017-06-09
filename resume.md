@@ -82,7 +82,7 @@ enginners and 1 designer in 1 month.
 
 ### Selected Projects
 
-#### [Crowd Detection with Binary Descriptors](http://dmoraes.org/papers/mo446a-2014-project.pdf)
+#### [Crowd Detection with BinBoost Descriptors](http://dmoraes.org/papers/mo446a-2014-project.pdf)
 
 **Research Project** <sub><sup>(Mar 2014 – Jun 2014)</sup></sub>
 

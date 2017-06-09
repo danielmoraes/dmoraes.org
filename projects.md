@@ -21,7 +21,7 @@ Read the [PDF](http://clrs.dmoraes.org). The
 
 ### Research Projects
 
-#### [Crowd Detection with Binary Descriptors](http://dmoraes.org/papers/mo446a-2014-project.pdf)
+#### [Crowd Detection with BinBoost Descriptors](http://dmoraes.org/papers/mo446a-2014-project.pdf)
 
 **Computer Vision, Machine Learning** <sub><sup>(Mar 2014 – Jun 2014)</sup></sub>
 
@@ -30,7 +30,7 @@ based on a dataset of 660 images collected from Google Image Search.
 
 Read the [paper](http://dmoraes.org/papers/mo446a-2014-project.pdf).
 
-#### [Low false positive learning with support vector machines](https://goo.gl/uMfbmf)
+#### [Low False Positive Learning with Support Vector Machines](https://goo.gl/uMfbmf)
 
 **Machine Learning** <sub><sup>(Dec 2012 – Feb 2014)</sup></sub>
 
