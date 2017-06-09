@@ -6,8 +6,6 @@ permalink: /resume/
 
 ### Education
 
-<hr>
-
 #### [University of Campinas (UNICAMP)](http://www.unicamp.br/unicamp/english)
 
 **Master of Computer Science** <sub><sup>(Ago 2011 - Feb 2014)</sup></sub>
@@ -28,8 +26,6 @@ permalink: /resume/
 <div style='height: 20px'></div>
 
 ### Selected Work Experience
-
-<hr>
 
 #### [SAMSUNG Research Institute Brazil (via UNICAMP)](http://www.samsung.com/)
 
@@ -86,8 +82,6 @@ enginners and 1 designer in 1 month.
 
 ### Selected Projects
 
-<hr>
-
 #### [Crowd Detection with Binary Descriptors](http://dmoraes.org/papers/mo446a-2014-project.pdf)
 
 **Research Project** <sub><sup>(Mar 2014 – Jun 2014)</sup></sub>
@@ -140,8 +134,6 @@ the products.
 
 ### Organizations
 
-<hr>
-
 #### [IEEE Image Forgery Detection Challenge](http://ifc.recod.ic.unicamp.br/)
 
 **Lead Programmer** <sub><sup>(May 2013 - Present)</sup></sub>
@@ -156,8 +148,6 @@ the products.
 
 ### Teaching Experience
 
-<hr>
-
 #### [Tiradentes University](http://www.unit.br/)
 
 **Tutor of Unraveiling Javascript Course** <sub><sup>(Nov 2010)</sup></sub>
@@ -166,9 +156,7 @@ the products.
 
 <div style='height: 20px'></div>
 
-### Skills
-
-<hr>
+### Technical Skills
 
 * Experienced in C++, JavaScript (ES6), Python, and SQL.
 * Experienced with GNU/Linux, Git, VIM, LIBSVM, and LaTeX.

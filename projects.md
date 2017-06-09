@@ -10,8 +10,6 @@ projects. These are a few I am proud of.
 
 ### Learning Projects
 
-<hr>
-
 #### [Solutions to Introduction to Algorithms](http://clrs.dmoraes.org)
 
 **Algorithms, Math** <sub><sup>(Jun 2016 – Present)</sup></sub>
@@ -22,8 +20,6 @@ Read the [PDF](http://clrs.dmoraes.org). The
 [source code](https://goo.gl/zBEAp6) is also available on GitHub.
 
 ### Research Projects
-
-<hr>
 
 #### [Crowd Detection with Binary Descriptors](http://dmoraes.org/papers/mo446a-2014-project.pdf)
 
@@ -54,7 +50,7 @@ Read the [paper](https://goo.gl/uMfbmf). The
 
 **Machine Learning** <sub><sup>(Aug 2012 – Dec 2012)</sup></sub>
 
-A product ranking algorithm that takes into account its cost-benefit ratio.
+A product ranking algorithm that takes into account the cost-benefit ratio.
 Agreement of 64% according to a test conducted with 79 users.
 
 {:refdef: style="text-align: center"}
@@ -63,9 +59,7 @@ Agreement of 64% according to a test conducted with 79 users.
 
 The [source code](https://goo.gl/1XhbYd) is available on GitHub.
 
-### Implementation Projects
-
-<hr>
+### Applications
 
 #### [Invoices Web Client](https://github.com/danielmoraes/invoices-web-client)
 
