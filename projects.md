@@ -12,7 +12,7 @@ projects. These are a few I am proud of.
 
 #### [Solutions to Introduction to Algorithms](http://clrs.dmoraes.org)
 
-**Algorithms, Math** <sub><sup>(Jun 2016 – Present)</sup></sub>
+**Algorithms, Math** <sub><sup>(Jun 2016 – Jan 2017)</sup></sub>
 
 My solutions for the problems from Introdution to Algorithms, Third Edition.
 
@@ -21,7 +21,7 @@ Read the [PDF](http://clrs.dmoraes.org). The
 
 #### [Solutions to Elements of Programming Interviews](https://github.com/danielmoraes/epi)
 
-**Algorithms** <sub><sup>(Feb 2017 – Present)</sup></sub>
+**Algorithms** <sub><sup>(Feb 2017 – Apr 2017)</sup></sub>
 
 My solutions for the problems from Elements of Programming Interviews, Second Edition.
 
