@@ -27,6 +27,29 @@ permalink: /resume/
 
 ### Selected Work Experience
 
+#### [HOOBOX ROBOTICS](http://www.hoo-box.com/)
+
+**Data Scientist and Lead Software Engineer**
+<sub><sup>(Mar 2018 - Present)</sup></sub>
+
+- Implemented a set of services and a web application for moving a wheelchair
+  based on facial expressions, on a team of three engineers.
+
+*Technologies*: React, Node.js, Python, OpenCV, RabbitMQ, Mongo, TCP/IP.
+
+#### [UpWork](https://www.upwork.com/)
+
+**Data Scientist and Software Engineer**
+<sub><sup>(May 2017 - Present)</sup></sub>
+
+- Implemented the major part of the frontend of a music streaming service.
+- Developed and launched a content management system for artworks.
+- Designed and implemented efficient algorithms for computing adaptive and
+  random pairs.
+
+*Technologies*: React, Node.js, C++, Shell Script, Docker, CI, REST API,
+Testing.
+
 #### [SAMSUNG Research Institute Brazil (via UNICAMP)](http://www.samsung.com/)
 
 **Data Scientist and Lead Software Engineer**
@@ -63,7 +86,7 @@ Plone-based website.
 groups and email management.
 * Developed [The Giant Robot](http://www.agame.com/game/giant-robot), on a team
 of 1 enginner and 2 designers in 3 months.
-* Developed [Axe Penny Paintball](https://goo.gl/RKFip9), on a team of 3
+* Developed [Axe Penny Paintball](https://goo.gl/RKFip9), on a team of three
 enginners and 1 designer in 1 month.
 
 *Technologies*: JavaScript, ActionScript, HTML/CSS.
