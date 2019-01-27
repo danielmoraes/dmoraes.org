@@ -4,7 +4,7 @@
 .site-header {
   min-height: 56px;
   border-top: 2px solid $grey-color-dark;
-  border-bottom: 2px solid $grey-color-light;
+  border-bottom: 1px solid $grey-color-light;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -68,7 +68,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit 0 5px;
 }
 
 .page-heading {

@@ -5,10 +5,10 @@ permalink: /
 
 <div class="intro">
   <div class="hello">
-    <p>Hello, I'm Daniel.</p>
+    <p>Hi, I'm Daniel.</p>
     <p>
-      I'm a data scientist and web developer who enjoys playing with algorithms
-      and machine learning. Currently, I live in Campinas (SP), Brazil.
+      I'm a software engineer who enjoys algorithms, machine learning, and
+      computer vision. Currently, I live in Campinas (SP), Brazil.
     </p>
     <p>If you want to get in touch with me, <span id="myma"></span> is best.</p>
   </div>
