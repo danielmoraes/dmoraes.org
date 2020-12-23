@@ -27,54 +27,92 @@ permalink: /resume/
 
 ### Selected Work Experience
 
-#### [HOOBOX ROBOTICS](http://www.hoo-box.com/)
+#### [Brick Abode](https://www.brickabode.com/)
 
-**Data Scientist and Lead Software Engineer**
-<sub><sup>(Mar 2018 - Present)</sup></sub>
+**Project Manager**
+<sub><sup>(Apr 2020 - Present)</sup></sub>
 
-- Implemented a set of services and a web application for moving a wheelchair
-  based on facial expressions, on a team of three engineers.
+*Technologies*: React, Django, Cypress, Jest, CI/CD, Zapier, Shell Script, MySQL, REST API.
+
+**Tech Lead**
+<sub><sup>(Nov 2019 - Mar 2020)</sup></sub>
+
+*Technologies*: React, Django, MySQL, Shell Script, REST API.
+
+**Senior Web Developer, Full Stack**
+<sub><sup>(Jun 2019 - Present)</sup></sub>
+
+*Technologies*: React, Django, MySQL, Shell Script.
+
+#### [Devord](https://www.devord.com/)
+
+**Senior Web Developer, Full Stack**
+<sub><sup>(Jul 2017 - Present)</sup></sub>
+
+Built a web application for managing image assets, which I am still
+maintaining. The application includes a Shopify integration, microservices,
+message queues, and asynchronous tasks for image processing. It is being used
+by thousands of artists since early 2018.
+
+*Technologies*: React, Node.js, CI, REST API, Testing.
+
+**Senior Web Developer, Full Stack**
+<sub><sup>(Nov 2017 - Mar 2019)</sup></sub>
+
+Built most of the front-end for an online music streaming service and
+structured its Firebase back end with a module oriented architecture.
+
+*Technologies*: React, Node.js, Docker, CI, REST API, Testing.
+
+**Software Engineer**
+<sub><sup>(Jun 2017 - Aug 2017)</sup></sub>
+
+Implemented a high performant C++ service for computing adaptive pairs based on
+a high number of concurrent requests.
+
+*Technologies*: C++, Shell Script, Docker, CI, REST API, Testing.
+
+#### [MindSea](https://mindsea.com/)
+
+**Senior Web Developer, Front End**
+<sub><sup>(May 2019 - Oct 2019)</sup></sub>
+
+Principal front-end developer for a habit-forming nutrition web application,
+which was completed and published to customers in around 6 months after I
+joined. The application includes a custom-built chat and integrates with
+third-party services for payments, video calls, scheduling, and email.
 
 *Technologies*: React, Node.js, Python, OpenCV, RabbitMQ, Mongo, TCP/IP.
 
-#### [UpWork](https://www.upwork.com/)
+#### [HOOBOX ROBOTICS](http://www.hoo-box.com/)
 
-**Data Scientist and Software Engineer**
-<sub><sup>(May 2017 - Present)</sup></sub>
+**Computer Vision Engineer**
+<sub><sup>(Mar 2018 - May 2019)</sup></sub>
 
-- Implemented the major part of the frontend of a music streaming service.
-- Developed and launched a content management system for artworks.
-- Designed and implemented efficient algorithms for computing adaptive and
-  random pairs.
+Led the implementation of software that controls a robotic wheelchair through facial expressions and applications for showcasing our computer vision products. Developed methods for detecting facial expressions, measuring a patient's pain level, and more.
 
-*Technologies*: React, Node.js, C++, Shell Script, Docker, CI, REST API,
-Testing.
+*Technologies*: React, Node.js, Python, OpenCV, RabbitMQ, Mongo, TCP/IP.
 
-#### [SAMSUNG Research Institute Brazil (via UNICAMP)](http://www.samsung.com/)
+#### [SAMSUNG Research Institute Brazil (via FUNCAMP)](http://www.samsung.com/)
 
-**Data Scientist and Lead Software Engineer**
-<sub><sup>(Mar 2014 - Feb 2016)</sup></sub>
+**Computer Vision Engineer**
+<sub><sup>(Mar 2014 - Mar 2016)</sup></sub>
 
-* Developed a method that detects porn audio with an accuracy of over 89.5%.
-* Optimized and ported our learning pipeline to a mobile device, with an speed
-gain of 63.5%.
-* Developed and delivered real time porn and violence detection tools for
-Android and Linux.
-- Our team got the second place at the
-[VSD generalization task](http://www.multimediaeval.org/mediaeval2014/violence2014/)
-of [MediaEval 2014](http://www.multimediaeval.org/mediaeval2014/).
-* The research resulted in a patent.
+I optimized and ported a real-time computer vision pipeline to Android,
+achieving a speed gain of 63.5%. Also implemented machine learning algorithms
+and a method that detects sensitive audio with an accuracy of 89.5%. Our team
+got a US patent and 2nd place at the [VSD generalization
+task](http://www.multimediaeval.org/mediaeval2014/violence2014/) of the
+[MediaEval 2014 competition](http://www.multimediaeval.org/mediaeval2014/).
 
 *Technologies*: C++, Python, Android, Shell Script, OpenCV, LibSVM, FFmpeg, openSMILE, VLFeat.
 
 #### [Regional Court of Sergipe (via CTIS)](http://www.tre-se.jus.br/)
 
-**Software Engineer** <sub><sup>(Dec 2010 - Jul 2011)</sup></sub>
+**Web Developer, Back End** <sub><sup>(Dec 2010 - Jul 2011)</sup></sub>
 
-* Developed a distributed module that synchronizes every day hundreds of
-files in real-time between two Plone-based websites.
-* Developed a module to automatically import thousands of documents to a
-Plone-based website.
+Wrote a python module for Plone (a CMS) that allows you to import and
+synchronize documents in real-time between two live websites.
 
 *Technologies*: Python, Plone.
 
@@ -82,22 +120,26 @@ Plone-based website.
 
 **Software Engineer, Intern** <sub><sup>(Mar 2009 - Apr 2010)</sup></sub>
 
-* Developed several features to an MMORPG browser game, including pathfinding,
-groups and email management.
-* Developed [The Giant Robot](http://www.agame.com/game/giant-robot), on a team
-of 1 enginner and 2 designers in 3 months.
-* Developed [Axe Penny Paintball](https://goo.gl/RKFip9), on a team of three
-enginners and 1 designer in 1 month.
+One of the main front-end developers of an online MMORPG web game called
+Medievo. Implemented features like user groups, email, and pathfinding.
 
-*Technologies*: JavaScript, ActionScript, HTML/CSS.
+*Technologies*: JavaScript, HTML/CSS.
+
+**Game Developer, Intern** <sub><sup>(Mar 2009 - Sep 2009)</sup></sub>
+
+Lead developer of [The Giant Robot](http://www.agame.com/game/giant-robot), an
+online game that was built in 3 months and was later published to agame.com.
+Helped to build some other flash-based games, including the [Axe Penny
+Paintball](https://goo.gl/RKFip9) which was published to zapak.com.
+
+*Technologies*: ActionScript.
 
 #### [Alfama Web](http://www.alfamaweb.com.br/)
 
-**Software Engineer, Intern** <sub><sup>(Feb 2008 - Feb 2009)</sup></sub>
+**Web Developer, Intern** <sub><sup>(Feb 2008 - Feb 2009)</sup></sub>
 
-* Implemented and launched several features to an student information system.
-* Developed and delivered a system to register employee performance.
-* Developed and launched several web applications and websites.
+Implemented features for multiple websites and web applications, including a
+student information system and a system to register employee performance.
 
 *Technologies*: PHP, JavaScript, SQL (MySQL), HTML/CSS.
 
