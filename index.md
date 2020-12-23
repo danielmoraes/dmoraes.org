@@ -7,8 +7,8 @@ permalink: /
   <div class="hello">
     <p>Hi, I'm Daniel.</p>
     <p>
-      I'm a software engineer who enjoys algorithms, machine learning, and
-      computer vision. Currently, I live in Campinas (SP), Brazil.
+      I'm a full stack web developer who enjoys algorithms, machine learning,
+      and computer vision. Currently, I live in Campinas (SP), Brazil.
     </p>
     <p>If you want to get in touch with me, <span id="myma"></span> is best.</p>
   </div>
