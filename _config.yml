@@ -11,7 +11,7 @@ github_username:  danielmoraes
 # build settings
 markdown: kramdown
 theme: jekyll-whiteglass
-gems:
+plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Résumé"
+title: "Resume"
 permalink: /resume/
 ---
 
@@ -10,51 +10,76 @@ permalink: /resume/
 
 **Master of Computer Science** <sub><sup>(Ago 2011 - Feb 2014)</sup></sub>
 
-* Title: Low False Positive Learning with Support Vector Machines.
-* Advisor: Prof. Dr. Anderson Rocha.
-* Member of Recod [Reasoning for Complex Data](http://recodbr.wordpress.com/).
+- Title: Low False Positive Learning with Support Vector Machines.
+- Advisor: Prof. Dr. Anderson Rocha.
+- Member of Recod [Reasoning for Complex Data](http://recodbr.wordpress.com/).
 
 #### [Tiradentes University (UNIT)](http://www.unit.br/)
 
 **Bachelor of Computer Science** <sub><sup>(Ago 2007 - Jul 2011)</sup></sub>
 
-* Title: Automatic Relevance Ranking of Offers Based on their Features.
-* Advisor: M.Sc Fernando Henrique Bezerra Cardoso.
-* Highest MGP (GPA equivalent) in class.
-* Algorithms and Data Structures I TA.
+- Title: Automatic Relevance Ranking of Offers Based on their Features.
+- Advisor: M.Sc Fernando Henrique Bezerra Cardoso.
+- Highest MGP (GPA equivalent) in class.
+- Algorithms and Data Structures I TA.
 
 <div style='height: 20px'></div>
 
 ### Selected Work Experience
 
+#### [Venue](https://www.venue.live/)
+
+**Senior Web Developer, Full Stack**
+<sub><sup>(Mar 2022 - Jun 2023)</sup></sub>
+
+Developed of a proof of concept for [venue.live/cocreator](https://venue.live/cocreator) within a
+two-week timeframe. Took the lead in significant releases, notably overseeing a
+complete rewrite of the RTC video module. My contributions played a vital role in
+the platform's stability, which was achieved shortly after my onboarding.
+
+_Technologies_: React, Ruby on Rails, Cypress, Node.js, PostgreSQL, Firebase, BigQuery, Docker, RTC.
+
 #### [Brick Abode](https://www.brickabode.com/)
 
 **Project Manager**
-<sub><sup>(Apr 2020 - Present)</sup></sub>
+<sub><sup>(Apr 2020 - Feb 2022)</sup></sub>
 
-*Technologies*: React, Django, Cypress, Jest, CI/CD, Zapier, Shell Script, MySQL, REST API.
+TODO
+
+_Technologies_: React, Django, Cypress, Jest, CI/CD, Zapier, Shell Script, MySQL, REST API.
 
 **Tech Lead**
 <sub><sup>(Nov 2019 - Mar 2020)</sup></sub>
 
-*Technologies*: React, Django, MySQL, Shell Script, REST API.
+TODO
+
+_Technologies_: React, Django, MySQL, Shell Script, REST API.
 
 **Senior Web Developer, Full Stack**
 <sub><sup>(Jun 2019 - Present)</sup></sub>
 
-*Technologies*: React, Django, MySQL, Shell Script.
+TODO
+
+_Technologies_: React, Django, MySQL, Shell Script.
 
 #### [Devord](https://www.devord.com/)
 
 **Senior Web Developer, Full Stack**
-<sub><sup>(Jul 2017 - Present)</sup></sub>
+<sub><sup>(Jul 2017 - Sep 2021)</sup></sub>
 
-Built a web application for managing image assets, which I am still
-maintaining. The application includes a Shopify integration, microservices,
-message queues, and asynchronous tasks for image processing. It is being used
-by thousands of artists since early 2018.
+Designed, developed, and launched a custom CMS for a prints marketplace. It went live in 2018. The marketplace grew year after year, and was then purchased by an investor in 2021.
 
-*Technologies*: React, Node.js, CI, REST API, Testing.
+It involved:
+
+- Interacting with the client to clarify the business requirements
+- Crafting a document with requirements, design, cost estimates, and milestones
+- Implementing the software from start to finish, with regular status updates
+  and reviews
+- Testing, launch, and maintenance
+
+The software uses Shopify as a backend and follows a microservices architecture. The microservices communicate through message queues. There is a microservice for generating (through image processing) the product images that are later uploaded and displayed in the marketplace.
+
+_Technologies_: React, Node.js, CI, REST API, Testing.
 
 **Senior Web Developer, Full Stack**
 <sub><sup>(Nov 2017 - Mar 2019)</sup></sub>
@@ -62,7 +87,7 @@ by thousands of artists since early 2018.
 Built most of the front-end for an online music streaming service and
 structured its Firebase back end with a module oriented architecture.
 
-*Technologies*: React, Node.js, Docker, CI, REST API, Testing.
+_Technologies_: React, Node.js, Docker, CI, REST API, Testing.
 
 **Software Engineer**
 <sub><sup>(Jun 2017 - Aug 2017)</sup></sub>
@@ -70,7 +95,7 @@ structured its Firebase back end with a module oriented architecture.
 Implemented a high performant C++ service for computing adaptive pairs based on
 a high number of concurrent requests.
 
-*Technologies*: C++, Shell Script, Docker, CI, REST API, Testing.
+_Technologies_: C++, Shell Script, Docker, CI, REST API, Testing.
 
 #### [MindSea](https://mindsea.com/)
 
@@ -82,7 +107,7 @@ which was completed and published to customers in around 6 months after I
 joined. The application includes a custom-built chat and integrates with
 third-party services for payments, video calls, scheduling, and email.
 
-*Technologies*: React, Node.js, Python, OpenCV, RabbitMQ, Mongo, TCP/IP.
+_Technologies_: React, Node.js, Python, OpenCV, RabbitMQ, Mongo, TCP/IP.
 
 #### [HOOBOX ROBOTICS](http://www.hoo-box.com/)
 
@@ -91,7 +116,7 @@ third-party services for payments, video calls, scheduling, and email.
 
 Led the implementation of software that controls a robotic wheelchair through facial expressions and applications for showcasing our computer vision products. Developed methods for detecting facial expressions, measuring a patient's pain level, and more.
 
-*Technologies*: React, Node.js, Python, OpenCV, RabbitMQ, Mongo, TCP/IP.
+_Technologies_: React, Node.js, Python, OpenCV, RabbitMQ, Mongo, TCP/IP.
 
 #### [SAMSUNG Research Institute Brazil (via FUNCAMP)](http://www.samsung.com/)
 
@@ -105,7 +130,7 @@ got a US patent and 2nd place at the [VSD generalization
 task](http://www.multimediaeval.org/mediaeval2014/violence2014/) of the
 [MediaEval 2014 competition](http://www.multimediaeval.org/mediaeval2014/).
 
-*Technologies*: C++, Python, Android, Shell Script, OpenCV, LibSVM, FFmpeg, openSMILE, VLFeat.
+_Technologies_: C++, Python, Android, Shell Script, OpenCV, LibSVM, FFmpeg, openSMILE, VLFeat.
 
 #### [Regional Court of Sergipe (via CTIS)](http://www.tre-se.jus.br/)
 
@@ -114,7 +139,7 @@ task](http://www.multimediaeval.org/mediaeval2014/violence2014/) of the
 Wrote a python module for Plone (a CMS) that allows you to import and
 synchronize documents in real-time between two live websites.
 
-*Technologies*: Python, Plone.
+_Technologies_: Python, Plone.
 
 #### [Lumentech](http://www.lumentech.cc/)
 
@@ -123,7 +148,7 @@ synchronize documents in real-time between two live websites.
 One of the main front-end developers of an online MMORPG web game called
 Medievo. Implemented features like user groups, email, and pathfinding.
 
-*Technologies*: JavaScript, HTML/CSS.
+_Technologies_: JavaScript, HTML/CSS.
 
 **Game Developer, Intern** <sub><sup>(Mar 2009 - Sep 2009)</sup></sub>
 
@@ -132,7 +157,7 @@ online game that was built in 3 months and was later published to agame.com.
 Helped to build some other flash-based games, including the [Axe Penny
 Paintball](https://goo.gl/RKFip9) which was published to zapak.com.
 
-*Technologies*: ActionScript.
+_Technologies_: ActionScript.
 
 #### [Alfama Web](http://www.alfamaweb.com.br/)
 
@@ -141,7 +166,7 @@ Paintball](https://goo.gl/RKFip9) which was published to zapak.com.
 Implemented features for multiple websites and web applications, including a
 student information system and a system to register employee performance.
 
-*Technologies*: PHP, JavaScript, SQL (MySQL), HTML/CSS.
+_Technologies_: PHP, JavaScript, SQL (MySQL), HTML/CSS.
 
 <div style='height: 20px'></div>
 
@@ -152,13 +177,13 @@ student information system and a system to register employee performance.
 **Research Project** <sub><sup>(Mar 2014 – Jun 2014)</sup></sub>
 
 - Developed a method that detects crowds of people on images, on a team of two
-researchers.
+  researchers.
 - Accuracy of over 94%, based on a dataset of 660 images collected from Google
-Image Search.
+  Image Search.
 - Research conducted under supervision of Prof. Dr. Siome Goldenstein and Prof.
-Dr. Sandra Avila.
+  Dr. Sandra Avila.
 
-*Technologies*: Python, Shell Script, OpenCV, LibSVM, BinBoost.
+_Technologies_: Python, Shell Script, OpenCV, LibSVM, BinBoost.
 
 #### [Low False Positive Learning with Support Vector Machines](https://goo.gl/uMfbmf)
 
@@ -166,34 +191,34 @@ Dr. Sandra Avila.
 
 - Novel 2-level learning method for low false positive classification.
 - Methods effectiveness showed trough comparisons to other solutions in 33
-datasets.
+  datasets.
 - Research conducted under supervision of Prof. Dr. Anderson Rocha and Prof.
-Dr. Jacques Wainer.
+  Dr. Jacques Wainer.
 
-*Technologies*: Python, LibSVM.
+_Technologies_: Python, LibSVM.
 
 #### [Feature Based Product Ranking](https://github.com/danielmoraes/product-rank)
 
 **Research Project** <sub><sup>(Aug 2012 – Dec 2012)</sup></sub>
 
-* A product ranking algorithm that takes into account the cost-benefit ratio of
-the products.
-* Agreement of 64% according to a test conducted with 79 users.
-* Research conducted under supervision of Prof. Dr. Anderson Rocha.
+- A product ranking algorithm that takes into account the cost-benefit ratio of
+  the products.
+- Agreement of 64% according to a test conducted with 79 users.
+- Research conducted under supervision of Prof. Dr. Anderson Rocha.
 
-*Technologies*: Python, LibSVM, R, JavaScript, HTML/CSS.
+_Technologies_: Python, LibSVM, R, JavaScript, HTML/CSS.
 
 #### [Spider for Google Shopping and Buscape](https://github.com/danielmoraes/product-spider)
 
 **Course Project** <sub><sup>(May 2012 – Aug 2012)</sup></sub>
 
-* A HTML spider that automatically collects products data from
-[Google Product Search](http://www.google.com/shopping) and
-[Buscapé](http://www.buscape.com.br/).
-* Collected and refined data of 495,000 offers from 34,000 laptops from
-[Google Product Search](http://www.google.com/shopping) during 7 months.
+- A HTML spider that automatically collects products data from
+  [Google Product Search](http://www.google.com/shopping) and
+  [Buscapé](http://www.buscape.com.br/).
+- Collected and refined data of 495,000 offers from 34,000 laptops from
+  [Google Product Search](http://www.google.com/shopping) during 7 months.
 
-*Technologies*: Python, LibSVM, JavaScript, SQL (MySQL), HTML/CSS.
+_Technologies_: Python, LibSVM, JavaScript, SQL (MySQL), HTML/CSS.
 
 <div style='height: 20px'></div>
 
@@ -203,11 +228,11 @@ the products.
 
 **Lead Programmer** <sub><sup>(May 2013 - Present)</sup></sub>
 
-* Built and maintained the
-[submission system](http://ifc.recod.ic.unicamp.br/fc.submission/) and the
-[challenge website](http://ifc.recod.ic.unicamp.br/), on a team of 2 engineers.
+- Built and maintained the
+  [submission system](http://ifc.recod.ic.unicamp.br/fc.submission/) and the
+  [challenge website](http://ifc.recod.ic.unicamp.br/), on a team of 2 engineers.
 
-*Technologies*: Python, Shell Script, SQL (PostgreSQL), JavaScript, HTML/CSS.
+_Technologies_: Python, Shell Script, SQL (PostgreSQL), JavaScript, HTML/CSS.
 
 <div style='height: 20px'></div>
 
@@ -217,14 +242,14 @@ the products.
 
 **Tutor of Unraveiling Javascript Course** <sub><sup>(Nov 2010)</sup></sub>
 
-* Short course presented at [Tiradentes University](http://www.unit.br).
+- Short course presented at [Tiradentes University](http://www.unit.br).
 
 <div style='height: 20px'></div>
 
 ### Technical Skills
 
-* Experienced in C++, JavaScript (ES6), Python, and SQL.
-* Experienced with GNU/Linux, Git, VIM, LIBSVM, and LaTeX.
-* Good with Node.js, React/Redux, Java/Android, and Shell Script.
-* Good with FFmpeg, R, OpenCV, Apache, PostgreSQL, and MySQL.
-* Can effectively communicate in English.
+- Experienced in React, TypeScript, Python, C++, and SQL.
+- Experienced with GNU/Linux, Git, VIM, LIBSVM, and LaTeX.
+- Good with Node.js, Ruby, Java/Android, and Shell Script.
+- Good with FFmpeg, R, OpenCV, Apache, PostgreSQL, and MySQL.
+- Can effectively communicate in English.

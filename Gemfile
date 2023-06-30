@@ -4,6 +4,7 @@ ruby RUBY_VERSION
 gem "jekyll", "4.2"
 
 gem "jekyll-whiteglass"
+gem "kramdown-parser-gfm"
 
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"

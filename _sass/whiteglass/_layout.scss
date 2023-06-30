@@ -27,6 +27,7 @@
 .site-nav {
   float: right;
   line-height: 56px;
+  font-size: 18px;
 
   .page-link {
     color: $text-color;
@@ -50,8 +51,6 @@
   }
 }
 
-
-
 /**
  * Site footer
  */
@@ -59,10 +58,9 @@
   padding: $spacing-unit 0;
   font-size: 15px;
   color: $grey-color;
-  text-align: center;
+  text-align: left;
+  margin-top: 72px;
 }
-
-
 
 /**
  * Page content
@@ -94,19 +92,26 @@
 }
 
 .intro {
-  text-align: center;
+  @include media-query($on-laptop) {
+    display: block;
+  }
+  display: flex;
+  text-align: left;
+  gap: 12px;
 }
 
 .intro .profile {
-  margin-top: 30px;
+  flex: 1;
 }
 
 .intro .profile img {
-  width: 150px;
+  width: 250px;
+  border-radius: 5%;
 }
 
 .intro .hello {
   font-size: 20px;
+  flex: 2;
 }
 
 .post-archives {
@@ -156,8 +161,6 @@
   }
 }
 
-
-
 /**
  * Posts
  */
@@ -202,8 +205,6 @@
     }
   }
 }
-
-
 
 /**
  * Pagination

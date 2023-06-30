@@ -1,0 +1,140 @@
+I"}<p>I enjoy working on <a href="https://github.com/danielmoraes/">open source</a> and
+<a href="https://www.scotthyoung.com/blog/2016/11/08/ultralearning-different/">ultra learning</a>
+projects. These are a few I am proud of.</p>
+
+<h3 id="learning-projects">Learning Projects</h3>
+
+<h4 id="solutions-to-introduction-to-algorithms"><a href="http://clrs.dmoraes.org">Solutions to Introduction to Algorithms</a></h4>
+
+<p><strong>Algorithms, Math</strong> <sub><sup>(Jun 2016 – Jan 2017)</sup></sub></p>
+
+<p>My solutions for the problems from Introdution to Algorithms, Third Edition.</p>
+
+<p>Read the <a href="http://clrs.dmoraes.org">PDF</a>. The
+<a href="https://goo.gl/zBEAp6">source code</a> is also available on GitHub.</p>
+
+<h4 id="solutions-to-elements-of-programming-interviews"><a href="https://github.com/danielmoraes/epi">Solutions to Elements of Programming Interviews</a></h4>
+
+<p><strong>Algorithms</strong> <sub><sup>(Feb 2017 – Apr 2017)</sup></sub></p>
+
+<p>My solutions for the problems from Elements of Programming Interviews, Second Edition.</p>
+
+<p>The <a href="https://github.com/danielmoraes/epi">source code</a> is available on GitHub.</p>
+
+<h3 id="research-projects">Research Projects</h3>
+
+<h4 id="crowd-detection-with-binboost-descriptors"><a href="http://dmoraes.org/papers/mo446a-2014-project.pdf">Crowd Detection with BinBoost Descriptors</a></h4>
+
+<p><strong>Computer Vision, Machine Learning</strong> <sub><sup>(Mar 2014 – Jun 2014)</sup></sub></p>
+
+<p>Method to detect crowds of people on images. Achieved an accuracy of over 94%,
+based on a dataset of 660 images collected from Google Image Search.</p>
+
+<p>Read the <a href="http://dmoraes.org/papers/mo446a-2014-project.pdf">paper</a>.</p>
+
+<h4 id="low-false-positive-learning-with-support-vector-machines"><a href="https://goo.gl/uMfbmf">Low False Positive Learning with Support Vector Machines</a></h4>
+
+<p><strong>Machine Learning</strong> <sub><sup>(Dec 2012 – Feb 2014)</sup></sub></p>
+
+<p>An extension of the traditional support vector machine classifier that
+incorporates the ability to control the false positive rate to a user-specified
+maximum. Method effectiveness showed trough comparisons to other solutions in
+33 datasets.</p>
+
+<p style="text-align: center"><a href="/images/risk_area_svm.png"><img src="/images/risk_area_svm.png" alt="Risk Area SVM" style="width: 300px" /></a></p>
+
+<p>Read the <a href="https://goo.gl/uMfbmf">paper</a>. The
+<a href="https://goo.gl/zO8sPF">source code</a> is also available on GitHub.</p>
+
+<h4 id="feature-based-product-ranking"><a href="https://goo.gl/1XhbYd">Feature Based Product Ranking</a></h4>
+
+<p><strong>Machine Learning</strong> <sub><sup>(Aug 2012 – Dec 2012)</sup></sub></p>
+
+<p>A product ranking algorithm that takes into account the cost-benefit ratio.
+Agreement of 64% according to a test conducted with 79 users.</p>
+
+<p style="text-align: center"><a href="/images/itemrank.png"><img src="/images/itemrank.png" alt="ItemRank" style="width: 500px" /></a></p>
+
+<p>The <a href="https://goo.gl/1XhbYd">source code</a> is available on GitHub.</p>
+
+<h3 id="applications">Applications</h3>
+
+<h4 id="invoices-web-client"><a href="https://github.com/danielmoraes/invoices-web-client">Invoices Web Client</a></h4>
+
+<p><strong>Web Application</strong> <sub><sup>(Apr 2017 – Present)</sup></sub></p>
+
+<p>A React web client for managing invoices.</p>
+
+<p>The <a href="https://github.com/danielmoraes/invoices-web-client">source code</a> is available on GitHub.</p>
+
+<h4 id="website-and-submission-system-of-the-ieee-ifc-2013"><a href="http://ifc.recod.ic.unicamp.br/">Website and Submission System of the IEEE IFC 2013</a></h4>
+
+<p><strong>Web Application, CLI Application</strong> <sub><sup>(May 2013 – Present)</sup></sub></p>
+
+<p>The project provided students and researchers the opportunity to showcase and
+pit their skills in a rigorous competition in the application of digital image
+processing.</p>
+
+<p>The <a href="http://ifc.recod.ic.unicamp.br/">website</a> and the
+<a href="http://ifc.recod.ic.unicamp.br/fc.submission">submission system</a> are available
+online.</p>
+
+<h4 id="flight-scan"><a href="https://goo.gl/Y28hj4">Flight Scan</a></h4>
+
+<p><strong>Web Crawler, CLI Application</strong> <sub><sup>(Oct 2013 – Mar 2014)</sup></sub></p>
+
+<p>Search for flight tickets directly from the terminal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python2.7 search_date.py -a avianca -o GRU -d GIG -e 2017-05-30 -r 2017-06-29
+&gt; SEARCH SUMMARY
+. GRU to GIG at 30/05/2017
+. GIG to GRU at 29/06/2017
+
+&gt; COLLECTING TICKETS
+. loading headers of avianca airline ... [ 0.000s ]
+. collecting tickets ... [ 1.719s ]
+
+&gt; GRU to GIG
+. 08:15 - 09:15 (BRL 375.0) {0 stop(s)}
+. 12:05 - 13:10 (BRL 375.0) {0 stop(s)}
+. 18:45 - 19:55 (BRL 375.0) {0 stop(s)}
+. 22:35 - 23:45 (BRL 199.0) {0 stop(s)}
+
+&gt; GIG to GRU
+. 06:15 - 07:30 (BRL 115.0) {0 stop(s)}
+. 09:00 - 10:15 (BRL 145.0) {0 stop(s)}
+. 14:45 - 16:00 (BRL 115.0) {0 stop(s)}
+. 18:00 - 19:10 (BRL 115.0) {0 stop(s)}
+
+&gt; RECOMMENDED TRIP
+. GRU to GIG: 22:35 - 23:45 (BRL 199.0)
+. GIG to GRU: 06:15 - 07:30 (BRL 115.0)
+. BRL 199.00 + BRL 115.00 = BRL 314.00 (plus taxes)
+
+Save BRL 10.00 leaving 1 day before.
+</code></pre></div></div>
+
+<p>The <a href="https://goo.gl/Y28hj4">source code</a> is available on GitHub.</p>
+
+<h4 id="decmac"><a href="http://dmoraes.org/projects/decmac/">DecMac</a></h4>
+
+<p><strong>Web Application</strong> <sub><sup>(Jun 2013)</sup></sub></p>
+
+<p>A decision machine to decide better and faster.</p>
+
+<p style="text-align: center"><a href="/images/decmac.png"><img src="/images/decmac.png" alt="DecMac" style="width: 500px" /></a></p>
+
+<p><a href="http://dmoraes.org/projects/decmac/">Demo</a>.
+Read the <a href="https://goo.gl/B1XGJ4">blog post</a>.
+The <a href="https://goo.gl/9EImei">source code</a> is available on GitHub.</p>
+
+<h4 id="spider-for-google-shopping-and-buscapé"><a href="/papers/spider_google_shopping.pdf">Spider for Google Shopping and Buscapé</a></h4>
+
+<p><strong>Web Crawler, Web Application</strong> <sub><sup>(May 2012 – Aug 2012)</sup></sub></p>
+
+<p>An HTML spider to collect laptops data in real-time from Google Shopping and
+Buscapé. Collected and refined data of 495,000 offers from 34,000 laptops during 7 months.</p>
+
+<p>Read the <a href="/papers/spider_google_shopping.pdf">paper</a> (brazilian portuguese).
+The <a href="https://goo.gl/6irc9P">source code</a> is also available on GitHub.</p>
+:ET

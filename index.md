@@ -5,18 +5,19 @@ permalink: /
 
 <div class="intro">
   <div class="hello">
-    <p>Hi, I'm Daniel.</p>
+    <p>Glad to meet you!</p>
     <p>
-      I'm a full stack web developer who enjoys algorithms, machine learning,
-      and computer vision. Currently, I live in Campinas (SP), Brazil.
+      I'm a software engineer. I find great joy in studying philosophy and
+      computer science, as well as working on side projects.
     </p>
-    <p>If you want to get in touch with me, <span id="myma"></span> is best.</p>
+    <p>
+      Feel free to reach out via <span id="myma"></span> to connect or discuss
+      exciting opportunities.
+    </p>
   </div>
 
   <div class="profile">
-    <a target="_blank" href="images/profile.jpg" title="Daniel Bastos Moraes">
-      <img src="images/profile.jpg" alt="that's me." />
-    </a>
+    <img src="images/profile.jpg" alt="that's me." />
   </div>
 </div>
 
