@@ -10,13 +10,13 @@ projects. These are a few I am proud of.
 
 ### Learning Projects
 
-#### [Solutions to Introduction to Algorithms](http://clrs.dmoraes.org)
+#### [Solutions to Introduction to Algorithms](http://dmoraes.org/doc/clrs.pdf)
 
 **Algorithms, Math** <sub><sup>(Jun 2016 – Jan 2017)</sup></sub>
 
 My solutions for the problems from Introdution to Algorithms, Third Edition.
 
-Read the [PDF](http://clrs.dmoraes.org). The
+Read the [PDF](http://dmoraes.org/doc/clrs.pdf). The
 [source code](https://goo.gl/zBEAp6) is also available on GitHub.
 
 #### [Solutions to Elements of Programming Interviews](https://github.com/danielmoraes/epi)
