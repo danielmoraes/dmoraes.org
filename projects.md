@@ -141,12 +141,12 @@ A decision machine to decide better and faster.
 Read the [blog post](https://goo.gl/B1XGJ4).
 The [source code](https://goo.gl/9EImei) is available on GitHub.
 
-#### [Spider for Google Shopping and Buscapé](/papers/spider_google_shopping.pdf)
+#### [Spider for Google Shopping and Buscapé](/doc/spider-google-shopping.pdf)
 
 **Web Crawler, Web Application** <sub><sup>(May 2012 – Aug 2012)</sup></sub>
 
 An HTML spider to collect laptops data in real-time from Google Shopping and
 Buscapé. Collected and refined data of 495,000 offers from 34,000 laptops during 7 months.
 
-Read the [paper](/papers/spider_google_shopping.pdf) (brazilian portuguese).
+Read the [paper](/doc/spider-google-shopping.pdf) (brazilian portuguese).
 The [source code](https://goo.gl/6irc9P) is also available on GitHub.
