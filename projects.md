@@ -29,14 +29,14 @@ The [source code](https://github.com/danielmoraes/epi) is available on GitHub.
 
 ### Research Projects
 
-#### [Crowd Detection with BinBoost Descriptors](http://dmoraes.org/papers/mo446a-2014-project.pdf)
+#### [Crowd Detection with BinBoost Descriptors](http://dmoraes.org/doc/mo446a-2014-project.pdf)
 
 **Computer Vision, Machine Learning** <sub><sup>(Mar 2014 – Jun 2014)</sup></sub>
 
 Method to detect crowds of people on images. Achieved an accuracy of over 94%,
 based on a dataset of 660 images collected from Google Image Search.
 
-Read the [paper](http://dmoraes.org/papers/mo446a-2014-project.pdf).
+Read the [paper](http://dmoraes.org/doc/mo446a-2014-project.pdf).
 
 #### [Low False Positive Learning with Support Vector Machines](https://goo.gl/uMfbmf)
 
