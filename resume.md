@@ -29,42 +29,42 @@ permalink: /resume/
 
 #### [Venue](https://www.venue.live/)
 
-**Senior Web Developer, Full Stack**
+**Senior Software Engineer, Full Stack**
 <sub><sup>(Mar 2022 - Jun 2023)</sup></sub>
 
-Developed of a proof of concept for [venue.live/cocreator](https://venue.live/cocreator) within a
-two-week timeframe. Took the lead in significant releases, notably overseeing a
-complete rewrite of the RTC video module. My contributions played a vital role in
-the platform's stability, which was achieved shortly after my onboarding.
+Developed a proof of concept for
+[venue.live/cocreator](https://venue.live/cocreator) within a two-week
+timeframe. Took the lead in significant releases, notably overseeing a complete
+rewrite of the RTC video module. My contributions played a vital role in the
+platform's stability, which was achieved shortly after my onboarding.
 
 _Technologies_: React, Ruby on Rails, Cypress, Node.js, PostgreSQL, Firebase, BigQuery, Docker, RTC.
 
 #### [Brick Abode](https://www.brickabode.com/)
 
-**Project Manager**
+**Senior Software Engineer | Tech Lead | Project Manager | Hiring Manager**
 <sub><sup>(Apr 2020 - Feb 2022)</sup></sub>
 
-TODO
+Lead frontend developer for an online marketplace that has moved more than $100M
+in sales. Led a team of 5 full-stack developers for about 2 years. Refactored
+most of the legacy front-end to use modern web technologies. Introduced static
+analysis, frontend testing, and real-time monitoring. Mentored the frontend
+team.
 
 _Technologies_: React, Django, Cypress, Jest, CI/CD, Zapier, Shell Script, MySQL, REST API.
 
-**Tech Lead**
-<sub><sup>(Nov 2019 - Mar 2020)</sup></sub>
+**Senior Software Engineer, Full Stack**
+<sub><sup>(Jun 2019 - Mar 2020)</sup></sub>
 
-TODO
-
-_Technologies_: React, Django, MySQL, Shell Script, REST API.
-
-**Senior Web Developer, Full Stack**
-<sub><sup>(Jun 2019 - Present)</sup></sub>
-
-TODO
+Led the implementation of a secondary market platform for music assets, which
+swiftly became the customer's primary sales source. The team performance
+increased noticeably after my onboarding.
 
 _Technologies_: React, Django, MySQL, Shell Script.
 
 #### [Devord](https://www.devord.com/)
 
-**Senior Web Developer, Full Stack**
+**Senior Software Engineer, Full Stack**
 <sub><sup>(Jul 2017 - Sep 2021)</sup></sub>
 
 Designed, developed, and launched a custom CMS for a prints marketplace. It went live in 2018. The marketplace grew year after year, and was then purchased by an investor in 2021.
@@ -81,10 +81,10 @@ The software uses Shopify as a backend and follows a microservices architecture.
 
 _Technologies_: React, Node.js, CI, REST API, Testing.
 
-**Senior Web Developer, Full Stack**
+**Senior Software Engineer, Full Stack**
 <sub><sup>(Nov 2017 - Mar 2019)</sup></sub>
 
-Built most of the front-end for an online music streaming service and
+Built most of the front end for an online music streaming service and
 structured its Firebase back end with a module oriented architecture.
 
 _Technologies_: React, Node.js, Docker, CI, REST API, Testing.
@@ -99,10 +99,10 @@ _Technologies_: C++, Shell Script, Docker, CI, REST API, Testing.
 
 #### [MindSea](https://mindsea.com/)
 
-**Senior Web Developer, Front End**
+**Senior Software Engineer, Front End**
 <sub><sup>(May 2019 - Oct 2019)</sup></sub>
 
-Principal front-end developer for a habit-forming nutrition web application,
+Principal front end developer for a habit-forming nutrition web application,
 which was completed and published to customers in around 6 months after I
 joined. The application includes a custom-built chat and integrates with
 third-party services for payments, video calls, scheduling, and email.
@@ -134,7 +134,7 @@ _Technologies_: C++, Python, Android, Shell Script, OpenCV, LibSVM, FFmpeg, open
 
 #### [Regional Court of Sergipe (via CTIS)](http://www.tre-se.jus.br/)
 
-**Web Developer, Back End** <sub><sup>(Dec 2010 - Jul 2011)</sup></sub>
+**Software Engineer, Back End** <sub><sup>(Dec 2010 - Jul 2011)</sup></sub>
 
 Wrote a python module for Plone (a CMS) that allows you to import and
 synchronize documents in real-time between two live websites.
@@ -145,7 +145,7 @@ _Technologies_: Python, Plone.
 
 **Software Engineer, Intern** <sub><sup>(Mar 2009 - Apr 2010)</sup></sub>
 
-One of the main front-end developers of an online MMORPG web game called
+One of the main front end developers of an online MMORPG web game called
 Medievo. Implemented features like user groups, email, and pathfinding.
 
 _Technologies_: JavaScript, HTML/CSS.
@@ -161,7 +161,7 @@ _Technologies_: ActionScript.
 
 #### [Alfama Web](http://www.alfamaweb.com.br/)
 
-**Web Developer, Intern** <sub><sup>(Feb 2008 - Feb 2009)</sup></sub>
+**Software Engineer, Intern** <sub><sup>(Feb 2008 - Feb 2009)</sup></sub>
 
 Implemented features for multiple websites and web applications, including a
 student information system and a system to register employee performance.
