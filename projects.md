@@ -127,7 +127,7 @@ Save BRL 10.00 leaving 1 day before.
 
 The [source code](https://goo.gl/Y28hj4) is available on GitHub.
 
-#### [DecMac](http://dmoraes.org/projects/decmac/)
+#### [DecMac](http://decmac.dmoraes.org)
 
 **Web Application** <sub><sup>(Jun 2013)</sup></sub>
 
@@ -137,7 +137,7 @@ A decision machine to decide better and faster.
 [![DecMac](/images/decmac.png){:ref: style="width: 500px"}](/images/decmac.png)
 {: refdef}
 
-[Demo](http://dmoraes.org/projects/decmac/).
+[Demo](http://decmac.dmoraes.org).
 Read the [blog post](https://goo.gl/B1XGJ4).
 The [source code](https://goo.gl/9EImei) is available on GitHub.
 
