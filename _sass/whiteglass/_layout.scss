@@ -22,12 +22,22 @@
   &:visited {
     color: $grey-color-dark;
   }
+
+  @include media-query($on-laptop) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .site-nav {
   float: right;
   line-height: 56px;
   font-size: 18px;
+
+  @include media-query($on-laptop) {
+    width: 100%;
+    text-align: center;
+  }
 
   .page-link {
     color: $text-color;
@@ -46,6 +56,9 @@
       &:not(:last-child) {
         margin-right: 0;
       }
+      &:first-child {
+        margin-left: 0;
+      }
       margin-left: 20px;
     }
   }
@@ -60,6 +73,11 @@
   color: $grey-color;
   text-align: left;
   margin-top: 72px;
+
+  @include media-query($on-laptop) {
+    text-align: center;
+    margin-top: 0px;
+  }
 }
 
 /**
@@ -67,6 +85,10 @@
  */
 .page-content {
   padding: $spacing-unit 0 5px;
+
+  @include media-query($on-laptop) {
+    padding: $spacing-unit $spacing-unit / 2 5px;
+  }
 }
 
 .page-heading {
@@ -102,11 +124,25 @@
 
 .intro .profile {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  @include media-query($on-laptop) {
+    align-items: center;
+  }
 }
 
 .intro .profile img {
-  width: 250px;
+  width: 225px;
   border-radius: 5%;
+  @include media-query($on-laptop) {
+    width: 100%;
+  }
+
+  @include media-query($on-laptop) {
+    width: 100%;
+  }
 }
 
 .intro .hello {
