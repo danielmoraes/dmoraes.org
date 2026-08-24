@@ -14,6 +14,8 @@
 - [Home](https://dmoraes.org/): bio and background
 - [Posts](https://dmoraes.org/posts): writing, updated occasionally rather than on a schedule
 - [Quotes](https://dmoraes.org/quotes): quotations he keeps coming back to
+- [About](https://dmoraes.org/about): fuller background and verification links
+- [Contact](https://dmoraes.org/contact): how to reach Daniel, or Devord for work inquiries
 - [Privacy](https://dmoraes.org/privacy): what this site collects, and what it doesn't
 - [Atom feed](https://dmoraes.org/feed.xml)
 - [Sitemap](https://dmoraes.org/sitemap.xml)

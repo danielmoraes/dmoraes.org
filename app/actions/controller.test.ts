@@ -83,8 +83,10 @@ describe("site nav", () => {
   it("also appears on pages that aren't one of the three sections, with none marked current", async () => {
     let notFound = await fetchPath("/nope").then((response) => response.text());
     let privacy = await fetchPath(routes.privacy.href()).then((response) => response.text());
+    let about = await fetchPath(routes.about.href()).then((response) => response.text());
+    let contact = await fetchPath(routes.contact.href()).then((response) => response.text());
 
-    for (let body of [notFound, privacy]) {
+    for (let body of [notFound, privacy, about, contact]) {
       assert.match(body, /href="\/"/);
       assert.match(body, /href="\/posts"/);
       assert.match(body, /href="\/quotes"/);
@@ -125,6 +127,8 @@ describe("feed and sitemap", () => {
     let body = await fetchPath(routes.sitemap.href()).then((response) => response.text());
 
     assert.match(body, /<loc>https:\/\/dmoraes\.org\/posts<\/loc>/);
+    assert.match(body, /<loc>https:\/\/dmoraes\.org\/about<\/loc>/);
+    assert.match(body, /<loc>https:\/\/dmoraes\.org\/contact<\/loc>/);
     assert.match(body, /<loc>https:\/\/dmoraes\.org\/privacy<\/loc>/);
     assert.equal(body.includes("/r/"), false);
   });
@@ -238,12 +242,78 @@ describe("privacy page", () => {
   });
 });
 
+describe("about page", () => {
+  it("is reachable with real content, not part of SiteNav or the footer", async () => {
+    let response = await fetchPath(routes.about.href());
+    let body = await response.text();
+
+    assert.equal(response.status, 200);
+    assert.equal(body.length > 500, true);
+    assert.match(body, /Unicamp/);
+
+    let footer = /<footer[^>]*>.*?<\/footer>/s.exec(body)?.[0] ?? "";
+    assert.equal(footer.includes("/about"), false);
+  });
+
+  it("serves markdown too, and doesn't carry Devord JSON-LD (not mentioned there beyond prose)", async () => {
+    let markdown = await fetchPath(routes.about.href(), { Accept: "text/markdown" });
+    let html = await fetchPath(routes.about.href());
+    let htmlBody = await html.text();
+
+    assert.match(await markdown.text(), /^# About/);
+    assert.equal(htmlBody.includes('"name":"Devord"'), false);
+  });
+});
+
+describe("contact page", () => {
+  it("is reachable with real content, not part of SiteNav or the footer", async () => {
+    let response = await fetchPath(routes.contact.href());
+    let body = await response.text();
+
+    assert.equal(response.status, 200);
+    assert.equal(body.length > 500, true);
+    assert.match(body, /contact@devord\.com/);
+
+    let footer = /<footer[^>]*>.*?<\/footer>/s.exec(body)?.[0] ?? "";
+    assert.equal(footer.includes("/contact"), false);
+  });
+
+  it("serves markdown too, and carries Devord's Organization JSON-LD", async () => {
+    let markdown = await fetchPath(routes.contact.href(), { Accept: "text/markdown" });
+    let html = await fetchPath(routes.contact.href());
+    let htmlBody = await html.text();
+
+    assert.match(await markdown.text(), /^# Contact/);
+    assert.match(htmlBody, /"@type":"Organization"/);
+    assert.match(htmlBody, /"name":"Devord"/);
+    assert.match(htmlBody, /"email":"contact@devord\.com"/);
+    assert.match(htmlBody, /"contactType":"sales"/);
+  });
+});
+
 describe("structured data and metadata", () => {
   it("carries Person JSON-LD on the home page, not Organization", async () => {
     let body = await fetchPath(routes.home.href()).then((response) => response.text());
 
     assert.match(body, /"@type":"Person"/);
     assert.match(body, /"name":"Daniel Bastos Moraes"/);
+  });
+
+  it("also carries Devord's Organization JSON-LD on the home page, since Devord is mentioned there", async () => {
+    let body = await fetchPath(routes.home.href()).then((response) => response.text());
+
+    assert.match(body, /"@type":"Organization"/);
+    assert.match(body, /"name":"Devord"/);
+    assert.match(body, /Devord/);
+  });
+
+  it("does not put Devord's JSON-LD on pages that don't mention Devord", async () => {
+    let quotes = await fetchPath(routes.quotes.href()).then((response) => response.text());
+    let posts = await fetchPath(routes.posts.index.href()).then((response) => response.text());
+
+    for (let body of [quotes, posts]) {
+      assert.equal(body.includes('"name":"Devord"'), false);
+    }
   });
 
   it("has an og:image", async () => {

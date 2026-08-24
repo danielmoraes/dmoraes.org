@@ -50,6 +50,8 @@ export function renderSitemap(posts: Post[]): string {
     routes.home.href(),
     routes.posts.index.href(),
     routes.quotes.href(),
+    routes.about.href(),
+    routes.contact.href(),
     routes.privacy.href(),
     ...posts.map((post) => routes.posts.show.href({ slug: post.slug })),
   ];

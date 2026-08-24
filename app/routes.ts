@@ -11,6 +11,8 @@ export const routes = route({
   },
   quotes: "/quotes",
   quotesMarkdown: get("/quotes.md"),
+  about: "/about",
+  contact: "/contact",
   privacy: "/privacy",
   feed: get("/feed.xml"),
   sitemap: get("/sitemap.xml"),
