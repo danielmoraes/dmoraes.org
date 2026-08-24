@@ -74,6 +74,11 @@ export function Layout(handle: Handle<LayoutProps>) {
           <meta property="og:url" content={`${SITE_URL}${path}`} />
           <meta property="og:type" content="website" />
           <link rel="alternate" type="application/atom+xml" title={SITE_NAME} href="/feed.xml" />
+          {/* Vercel Web Analytics' plain-script integration, not the
+              @vercel/analytics React package — this site has no client
+              hydration to hang a component on. Vercel serves this path
+              automatically once Web Analytics is enabled on the project. */}
+          <script defer src="/_vercel/insights/script.js" />
         </head>
         <body mix={bodyStyle}>
           <main mix={mainStyle}>{children}</main>
