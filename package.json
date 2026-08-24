@@ -1,0 +1,28 @@
+{
+  "name": "dmoraes-org",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development node --watch --import remix/node-tsx server.ts",
+    "start": "NODE_ENV=production node --import remix/node-tsx server.ts",
+    "test": "NODE_ENV=test node --import remix/node-tsx --test \"app/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint && oxfmt --check .",
+    "format": "oxfmt .",
+    "check": "pnpm lint && pnpm typecheck && pnpm test"
+  },
+  "dependencies": {
+    "lucide-static": "^1.33.0",
+    "marked": "^18.0.10",
+    "remix": "^3.0.0-beta.10"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=24.3.0"
+  }
+}
