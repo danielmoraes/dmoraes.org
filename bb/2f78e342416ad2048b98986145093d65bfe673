@@ -1,0 +1,21 @@
+app/ui/layout.tsx
+  s_1fed124c734b99::t_29e7c64ab85cdd 84-89,99-103
+  s_1fed124c734b99::t_44b4979de4305c 210,218,226
+  s_1fed124c734b99::t_43a733582d421a 104-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "bb2f78e342416ad2048b98986145093d65bfe673",
+  "prompts": {},
+  "sessions": {
+    "s_1fed124c734b99": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc2c7ee8-c59e-4820-97e1-59930966c58c",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Daniel Moraes <daniel@dmoraes.org>"
+    }
+  }
+}
