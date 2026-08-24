@@ -27,13 +27,14 @@ Start from `app/routes.ts` — it is the source of truth for every URL, and
 ## Layout
 
 - `app/routes.ts` — the URL contract, shared by server and (if ever) browser
-- `app/router.ts` — middleware order and controller wiring
-- `app/actions/controller.tsx` — top-level routes (home, quotes, feed, sitemap, resume)
+- `app/router.tsx` — middleware order, controller wiring, and the agent-friendly 404 (`defaultHandler`)
+- `app/actions/controller.tsx` — top-level routes (home, quotes, privacy, feed, sitemap, resume)
 - `app/actions/posts/` — the posts route map and its pages
 - `app/data/` — post loading and quote data
 - `app/ui/layout.tsx` — the one page shell; every route renders through it
-- `app/utils/` — pure helpers (markdown, dates), testable without a router
+- `app/utils/` — pure helpers (markdown, dates, `Accept` content negotiation), testable without a router
 - `content/posts/` — posts as markdown; **filename is the slug**
+- `public/llms.txt` — what this site is and when an agent should reach for it
 
 ## Invariants
 
@@ -55,8 +56,10 @@ renders as plain text (not a link), the other two as live links. Don't go
 back to omitting the current section from the set: that was tried first and
 read as broken rather than as a location marker. It replaced one-off
 "← Home" / "← Posts" links at the bottom of a page — don't reintroduce those
-either. The footer stays contact-only (email, GitHub, LinkedIn, theme
-toggle); don't add section links there.
+either. The footer stays contact-only (Twitter, email, GitHub, LinkedIn,
+theme toggle); don't add section links there. `/privacy` deliberately isn't
+in SiteNav or the footer either — it's a utility page, not one of the site's
+three sections; it's reachable via the sitemap, `llms.txt`, and direct links.
 
 **`NODE_ENV=test` disables the asset watcher.** Without it the watcher holds
 the process open and the test runner hangs instead of exiting.
@@ -69,6 +72,17 @@ containing `&`, `<`, or `>`.
 hand-drawn — there's no source file checked in. To rebuild after a palette
 change, render a square (no `rx`, unlike `favicon.svg` — iOS applies its own
 corner mask) version of the mark at 512px+ and downsize to exactly 180×180.
+`public/og-image.png` (1200×630) is the same kind of asset — rendered, no
+source file, regenerate at the same size if the palette or copy changes.
+
+**Pages that have real prose content negotiate `Accept: text/markdown`**
+(home, quotes, posts, privacy, the 404) via `app/utils/negotiate.ts` — an
+agent asking for Markdown gets Markdown from the same URL a browser gets
+HTML from, per the acceptmarkdown.com convention. Every negotiated response
+carries `Vary: Accept`, on both representations, not just the negotiated
+one. A route that gets real content added later (new prose page) should
+negotiate too; a route that's already structured data (feed, sitemap) has no
+reason to.
 
 ## Testing
 

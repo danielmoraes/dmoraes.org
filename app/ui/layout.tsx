@@ -17,8 +17,9 @@ export interface LayoutProps {
 
 const SITE_NAME = "Daniel Bastos Moraes";
 const SITE_URL = "https://dmoraes.org";
-const DEFAULT_DESCRIPTION =
-  "Daniel Bastos Moraes is Head of Engineering at Form Factory. Previously computer vision at Samsung Research, and a Master of Computer Science at Unicamp.";
+/** Also used by PersonSchema's JSON-LD `description` — one accurate sentence, not two. */
+export const DEFAULT_DESCRIPTION =
+  "Daniel Bastos Moraes works at Form Factory, leading the engineering team building headless commerce for enterprise brands. Previously computer vision at Samsung Research, and a Master of Computer Science at Unicamp.";
 
 // IBM Plex Sans for body, Newsreader for the headline — loaded below via
 // Google Fonts. Deliberately not Jarred Sumner's pairing (DM Sans / Crimson
@@ -73,6 +74,7 @@ export function Layout(handle: Handle<LayoutProps>) {
           <meta property="og:description" content={description} />
           <meta property="og:url" content={`${SITE_URL}${path}`} />
           <meta property="og:type" content="website" />
+          <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
           <link rel="alternate" type="application/atom+xml" title={SITE_NAME} href="/feed.xml" />
           {/* Vercel Web Analytics' plain-script integration, not the
               @vercel/analytics React package — this site has no client

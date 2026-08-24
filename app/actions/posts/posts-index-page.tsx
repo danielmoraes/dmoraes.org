@@ -11,6 +11,23 @@ export interface PostsIndexPageProps {
   posts: Post[];
 }
 
+/** The text/markdown representation — see app/utils/negotiate.ts. */
+export function postsIndexMarkdown(posts: Post[]): string {
+  if (posts.length === 0) return "# Posts\n\nNothing here yet.\n";
+
+  let years = groupByYear(posts);
+  let body = years
+    .map(([year, yearPosts]) => {
+      let links = yearPosts
+        .map((post) => `- [${post.title}](${routes.posts.show.href({ slug: post.slug })})`)
+        .join("\n");
+      return `## ${year}\n\n${links}`;
+    })
+    .join("\n\n");
+
+  return `# Posts\n\n${body}\n`;
+}
+
 /**
  * Grouped by year. A year heading makes a short list read as an archive rather
  * than an underfed blog — which matters when a year only has one entry.

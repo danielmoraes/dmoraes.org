@@ -8,6 +8,7 @@ export const routes = route({
     show: "/posts/:slug",
   },
   quotes: "/quotes",
+  privacy: "/privacy",
   feed: get("/feed.xml"),
   sitemap: get("/sitemap.xml"),
   // Unguessable path segment, checked against RESUME_TOKEN in the controller.

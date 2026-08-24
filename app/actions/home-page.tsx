@@ -1,9 +1,27 @@
 import { Layout } from "../ui/layout.tsx";
+import { PersonSchema } from "../ui/person-schema.tsx";
 import { SiteNav } from "../ui/site-nav.tsx";
+
+/**
+ * Mirrors the JSX below for the text/markdown representation (see
+ * app/utils/negotiate.ts). Kept as a separate hand-written constant rather
+ * than generated from the JSX — the JSX is deliberately untouched so the
+ * carefully-tuned bio copy carries zero risk of a rendering regression.
+ * Update both when the bio copy changes.
+ */
+export const HOME_MARKDOWN = `# Daniel Bastos Moraes
+
+I work at [Form Factory](https://formfactory.dev), where I lead the engineering team building headless commerce for enterprise brands.
+
+On the side, I like working on personal open source projects, reading, and spending time with my wife and two kids.
+
+I've spent 17+ years writing software: computer vision at [Samsung Research](https://research.samsung.com/srbr) and [HOOBOX](https://hoobox.one), then a decade of frontend and full-stack work across marketplaces, finance, streaming, and health. Along the way I did a [Master of Computer Science](https://scholar.google.com/citations?user=HIV5H5sAAAAJ&hl=en) at Unicamp on machine learning, in the [Recod lab](https://recod.ai/). Long before that, I built games and websites nobody remembers.
+`;
 
 export function HomePage() {
   return () => (
     <Layout>
+      <PersonSchema />
       <h1>Daniel Bastos Moraes</h1>
 
       <SiteNav current="home" />

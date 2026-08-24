@@ -7,9 +7,11 @@ import { createFileResponse } from "remix/response/file";
 
 import { loadPosts } from "../data/posts.ts";
 import { routes } from "../routes.ts";
+import { respondNegotiated } from "../utils/negotiate.ts";
 import { renderAtomFeed, renderSitemap } from "./feeds.ts";
-import { HomePage } from "./home-page.tsx";
-import { QuotesPage } from "./quotes-page.tsx";
+import { HOME_MARKDOWN, HomePage } from "./home-page.tsx";
+import { PRIVACY_MARKDOWN, PrivacyPage } from "./privacy-page.tsx";
+import { QuotesPage, quotesMarkdown } from "./quotes-page.tsx";
 
 export default createController(routes, {
   actions: {
@@ -26,11 +28,24 @@ export default createController(routes, {
     },
 
     home(context) {
-      return context.render(<HomePage />);
+      return respondNegotiated(context.request, {
+        html: () => context.render(<HomePage />),
+        markdown: () => HOME_MARKDOWN,
+      });
     },
 
     quotes(context) {
-      return context.render(<QuotesPage />);
+      return respondNegotiated(context.request, {
+        html: () => context.render(<QuotesPage />),
+        markdown: quotesMarkdown,
+      });
+    },
+
+    privacy(context) {
+      return respondNegotiated(context.request, {
+        html: () => context.render(<PrivacyPage />),
+        markdown: () => PRIVACY_MARKDOWN,
+      });
     },
 
     async feed() {

@@ -5,6 +5,12 @@ import { routes } from "../routes.ts";
 import { Layout } from "../ui/layout.tsx";
 import { SiteNav } from "../ui/site-nav.tsx";
 
+/** The text/markdown representation — see app/utils/negotiate.ts. */
+export function quotesMarkdown(): string {
+  let body = quotes.map((quote) => `> ${quote.text}\n> — ${quote.author}`).join("\n\n");
+  return `# Quotes\n\n${body}\n`;
+}
+
 /** Quotes are unattributed-to-source favorites, kept as plain text. */
 export function QuotesPage() {
   return () => (

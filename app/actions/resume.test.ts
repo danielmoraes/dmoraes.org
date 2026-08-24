@@ -15,7 +15,7 @@ import * as path from "node:path";
 import * as assert from "remix/assert";
 import { describe, it } from "remix/test";
 
-import { router } from "../router.ts";
+import { router } from "../router.tsx";
 
 const ORIGIN = "http://localhost";
 const TEST_TOKEN = "test-only-resume-token-0123456789abcdef";

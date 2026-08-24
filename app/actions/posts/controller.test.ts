@@ -1,13 +1,13 @@
 import * as assert from "remix/assert";
 import { describe, it } from "remix/test";
 
-import { router } from "../../router.ts";
+import { router } from "../../router.tsx";
 import { routes } from "../../routes.ts";
 
 const ORIGIN = "http://localhost";
 
-function fetchPath(path: string): Promise<Response> {
-  return router.fetch(new Request(ORIGIN + path));
+function fetchPath(path: string, headers?: HeadersInit): Promise<Response> {
+  return router.fetch(new Request(ORIGIN + path, { headers }));
 }
 
 describe("posts index", () => {
@@ -55,5 +55,17 @@ describe("post", () => {
   it("404s a slug that tries to escape the content directory", async () => {
     let response = await fetchPath("/posts/..%2F..%2Fpackage");
     assert.equal(response.status, 404);
+  });
+
+  it("serves its own markdown source as the text/markdown representation", async () => {
+    let response = await fetchPath(
+      routes.posts.show.href({ slug: "stop-putting-off-your-decisions" }),
+      { Accept: "text/markdown" },
+    );
+    let body = await response.text();
+
+    assert.match(response.headers.get("Content-Type") ?? "", /text\/markdown/);
+    // The raw source, not the rendered HTML — real asterisks, not <strong>.
+    assert.match(body, /\*\*decision/);
   });
 });

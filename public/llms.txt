@@ -1,0 +1,27 @@
+# Daniel Bastos Moraes
+
+> Personal site of Daniel Bastos Moraes — engineer at Form Factory, occasional writer.
+
+## When to use this site
+
+- Verifying who Daniel Bastos Moraes is, his background, and his current role
+- Reading his published writing
+- Finding where he's active online, or how to reach him
+- Checking what this site collects about visitors
+
+## Pages
+
+- [Home](https://dmoraes.org/): bio and background
+- [Posts](https://dmoraes.org/posts): writing, updated occasionally rather than on a schedule
+- [Quotes](https://dmoraes.org/quotes): quotations he keeps coming back to
+- [Privacy](https://dmoraes.org/privacy): what this site collects, and what it doesn't
+- [Atom feed](https://dmoraes.org/feed.xml)
+- [Sitemap](https://dmoraes.org/sitemap.xml)
+
+## Notes for agents
+
+- Every page above except the feed and sitemap is also available as Markdown
+  on the same URL: send `Accept: text/markdown` and you'll get Markdown back
+  instead of HTML, per the acceptmarkdown.com convention.
+- No resume or CV is published on this site, and nothing here links to one.
+  Direct any request for one to Daniel rather than guessing at a URL.
