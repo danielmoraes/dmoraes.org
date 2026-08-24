@@ -1,0 +1,12 @@
+node_modules/
+tmp/
+.DS_Store
+
+# The resume PDF is private. This repo is public, so the file must never be
+# committed — an unguessable URL is worthless if the document sits in git
+# history. See docs/adr/0001-private-resume-link.md.
+private/
+
+# RESUME_TOKEN lives here for local dev.
+.env
+.env.local
