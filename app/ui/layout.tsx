@@ -81,8 +81,12 @@ export function Layout(handle: Handle<LayoutProps>) {
               media query still drives it. */}
           <script innerHTML={THEME_INIT_SCRIPT} />
           <style innerHTML={THEME_TOKENS_CSS} />
-          {/* Only the two faces that paint above the fold — not the 600
-              sans, `h2` is below the fold on every page. `crossOrigin` is
+          {/* All three faces that paint above the fold on at least one page
+              — the home page's "Now" heading puts the 600 sans there too,
+              not just body text and the h1. Without a preload, the browser
+              only discovers a font once it parses the CSSOM rule that needs
+              it, which PageSpeed's network-dependency-tree insight flagged
+              as a slow chain for the 600 sans specifically. `crossOrigin` is
               required here even though the fonts are same-origin: without it
               the browser fetches the file twice and the preload is wasted. */}
           <link
@@ -90,6 +94,13 @@ export function Layout(handle: Handle<LayoutProps>) {
             as="font"
             type="font/woff2"
             href={FONT_SANS_400}
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href={FONT_SANS_600}
             crossOrigin="anonymous"
           />
           <link
@@ -196,7 +207,7 @@ const THEME_TOKENS_CSS = `
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url("${FONT_SANS_400}") format("woff2");
   unicode-range: ${LATIN_UNICODE_RANGE};
 }
@@ -204,7 +215,7 @@ const THEME_TOKENS_CSS = `
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url("${FONT_SANS_600}") format("woff2");
   unicode-range: ${LATIN_UNICODE_RANGE};
 }
@@ -212,7 +223,7 @@ const THEME_TOKENS_CSS = `
   font-family: "Newsreader";
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url("${FONT_SERIF_600}") format("woff2");
   unicode-range: ${LATIN_UNICODE_RANGE};
 }
