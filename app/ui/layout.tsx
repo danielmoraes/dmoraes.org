@@ -261,6 +261,18 @@ const THEME_TOKENS_CSS = `
   size-adjust: 102.56%;
 }
 
+/* Cross-document View Transitions: a light cross-fade between full page
+   navigations (this site has no client-side routing — every link is a real
+   navigation, see AGENTS.md). Both the outgoing and incoming page need this
+   rule for the browser to animate the pair, which every page gets for free
+   since they all render through this same Layout. Pure CSS, no JS, no
+   opt-out needed for unsupported browsers — they just navigate normally.
+   Deliberately no custom ::view-transition-* rules: the UA default is
+   already a simple fade, which is the "minimal" version of this. */
+@view-transition {
+  navigation: auto;
+}
+
 html {
   --text: #1a1a1a;
   --muted: #6b6b6b;

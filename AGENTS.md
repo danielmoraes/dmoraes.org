@@ -7,6 +7,15 @@ isn't a `clientEntry`. Before adding `clientEntry(...)` anywhere, or a second
 inline script, be sure the interactivity genuinely can't be done with plain
 HTML or extending the existing script.
 
+Every navigation is a real, full page load — there's no client-side router.
+The `@view-transition { navigation: auto; }` rule in `THEME_TOKENS_CSS`
+(`app/ui/layout.tsx`) gets a light cross-fade between pages anyway, via the
+browser's native Cross-Document View Transitions — pure CSS, no JS, and
+unsupported browsers just navigate normally. This was chosen deliberately
+over adopting client-side routing (which sites like kentcdodds.com and
+kody.codes use, and is a real, non-trivial architecture change) to get
+transition polish without giving up the no-hydration invariant above.
+
 Domain terms — Post, Quote, Resume, Layout — are defined in
 [`CONTEXT.md`](./CONTEXT.md). Use those words; don't drift to synonyms.
 
