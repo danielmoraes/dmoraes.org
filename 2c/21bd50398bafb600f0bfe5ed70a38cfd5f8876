@@ -1,0 +1,21 @@
+app/actions/controller.test.ts
+  s_1fed124c734b99::t_51aa80482a90aa 291-293
+app/ui/devord-schema.tsx
+  s_1fed124c734b99::t_f41394011e0215 24-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "2c21bd50398bafb600f0bfe5ed70a38cfd5f8876",
+  "prompts": {},
+  "sessions": {
+    "s_1fed124c734b99": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc2c7ee8-c59e-4820-97e1-59930966c58c",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Daniel Moraes <daniel@dmoraes.org>"
+    }
+  }
+}
