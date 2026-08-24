@@ -1,3 +1,5 @@
+import { css } from "remix/ui";
+
 import { Layout } from "../ui/layout.tsx";
 import { DevordSchema } from "../ui/devord-schema.tsx";
 import { PersonSchema } from "../ui/person-schema.tsx";
@@ -35,7 +37,7 @@ export function HomePage() {
 
       <SiteNav current="home" />
 
-      <h2>Now</h2>
+      <h2 mix={sectionLabelStyle}>Now</h2>
 
       <p>
         I work at{" "}
@@ -58,7 +60,7 @@ export function HomePage() {
         with my wife and two kids.
       </p>
 
-      <h2>Background</h2>
+      <h2 mix={sectionLabelStyle}>Background</h2>
 
       <p>
         I've spent 17+ years writing software: computer vision at{" "}
@@ -87,3 +89,13 @@ export function HomePage() {
     </Layout>
   );
 }
+
+// Overrides the layout's global h2 style — same reasoning as PostsIndexPage's
+// yearStyle: a section label should read as a quiet marker, not a headline.
+// Still a real <h2> for the heading structure, just styled to recede.
+const sectionLabelStyle = css({
+  color: "var(--muted)",
+  fontSize: "0.8125rem",
+  fontWeight: 400,
+  margin: "2.5rem 0 0.6rem",
+});
