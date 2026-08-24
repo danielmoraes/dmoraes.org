@@ -1,0 +1,8 @@
+[build]
+command = "echo 'No build step: Remix 3 runs TypeScript directly; Netlify Functions bundles it per-function'"
+publish = "public"
+
+[functions]
+# app/data/posts.ts reads these from disk at request time, not via `import`,
+# so the bundler can't discover them on its own.
+included_files = ["content/posts/**"]
