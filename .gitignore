@@ -10,3 +10,5 @@ private/
 # RESUME_TOKEN lives here for local dev.
 .env
 .env.local
+.vercel
+.env*

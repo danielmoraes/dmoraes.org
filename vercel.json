@@ -1,0 +1,8 @@
+{
+  "buildCommand": "echo 'No build step: Remix 3 runs TypeScript directly, no bundler'",
+  "functions": {
+    "server.ts": {
+      "includeFiles": "{public/**,content/posts/**}"
+    }
+  }
+}
