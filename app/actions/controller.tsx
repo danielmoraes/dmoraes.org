@@ -5,7 +5,6 @@ import { createController } from "remix/router";
 import { openLazyFile } from "remix/fs";
 import { createFileResponse } from "remix/response/file";
 
-import { assetServer } from "../assets.ts";
 import { loadPosts } from "../data/posts.ts";
 import { routes } from "../routes.ts";
 import { renderAtomFeed, renderSitemap } from "./feeds.ts";
@@ -14,7 +13,13 @@ import { QuotesPage } from "./quotes-page.tsx";
 
 export default createController(routes, {
   actions: {
+    // Imported lazily, not at module scope: remix/assets pulls in lightningcss
+    // for CSS minification, which loads a native binary the moment the module
+    // is imported. Nothing links to /assets/* yet (no clientEntry exists), so
+    // there's no reason to pay that cost — or hit Vercel's file-tracer gap
+    // around that binary — on every request to every route.
     async assets(context) {
+      let { assetServer } = await import("../assets.ts");
       return (
         (await assetServer.fetch(context.request)) ?? new Response("Not Found", { status: 404 })
       );

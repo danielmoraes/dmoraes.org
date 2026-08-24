@@ -6,8 +6,6 @@ import { createHtmlResponse } from "remix/response/html";
 import type { RemixNode } from "remix/ui";
 import { renderToStream } from "remix/ui/server";
 
-import { assetServer } from "../assets.ts";
-
 export function render() {
   return renderWith(
     ({ request, router }) =>
@@ -17,6 +15,11 @@ export function render() {
           signal: request.signal,
           resolveFrame: (src) => resolveFrame(router, request, src),
           // Server rendering turns client entries into browser module URLs and preloads.
+          // assetServer is imported lazily, not at module scope: it pulls in
+          // lightningcss for CSS minification, which loads a native binary the
+          // moment it's imported. Nothing uses clientEntry yet (no app/**/public/
+          // entry module exists), so resolveClientEntry never actually runs —
+          // no reason to pay that cost on every request to every route.
           async resolveClientEntry(entryId, component) {
             if (!entryId.startsWith("file://")) {
               throw new Error(
@@ -24,6 +27,7 @@ export function render() {
               );
             }
 
+            let { assetServer } = await import("../assets.ts");
             let [href, preloads] = await Promise.all([
               assetServer.getHref(entryId),
               assetServer.getPreloads(entryId),
