@@ -1,0 +1,23 @@
+.gitignore
+  s_56cc82a89d860d::t_7bf591329d46fa 13-14
+vercel.json
+  s_56cc82a89d860d::t_64e5cf11ca2370 2,4
+  s_56cc82a89d860d::t_c8a347acbe36dd 1,3,6-8
+  s_56cc82a89d860d::t_544b52faae0c6f 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "2bd2a62eaff7c2ad11021117d538ff0ecd793da3",
+  "prompts": {},
+  "sessions": {
+    "s_56cc82a89d860d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7d26fe1b-ed48-4591-b2be-377a341d2de1",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": null
+    }
+  }
+}
