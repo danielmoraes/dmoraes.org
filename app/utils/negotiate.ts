@@ -49,24 +49,38 @@ export function negotiate(acceptHeader: string | null, produces: readonly string
  * sets `Vary: Accept` on whichever one is returned — required on both, not
  * just the negotiated one, or a cache that saw one representation first will
  * serve it to every subsequent request regardless of that request's Accept.
+ *
+ * `markdownHref`, if given, is the URL of a standalone `.md` sibling for
+ * this same content (e.g. `/posts/foo.md` alongside `/posts/foo`) — set on
+ * the HTML response as a `Link: rel="alternate"` header, per
+ * acceptmarkdown.com's discovery guidance. The matching `<link>` element in
+ * the page's `<head>` is separate — see LayoutProps.markdownHref.
  */
 export async function respondNegotiated(
   request: Request,
   handlers: { html: () => Response | Promise<Response>; markdown: () => string },
+  markdownHref?: string,
 ): Promise<Response> {
   let produces = ["text/html", "text/markdown"];
   let type = negotiate(request.headers.get("Accept"), produces);
   if (type === null) return notAcceptable(produces);
 
-  let response =
-    type === "text/markdown"
-      ? new Response(handlers.markdown(), {
-          headers: { "Content-Type": "text/markdown; charset=utf-8" },
-        })
-      : await handlers.html();
+  if (type === "text/markdown") {
+    let response = markdownResponse(handlers.markdown());
+    addVary(response, "Accept");
+    return response;
+  }
 
+  let response = await handlers.html();
   addVary(response, "Accept");
+  if (markdownHref)
+    response.headers.append("Link", `<${markdownHref}>; rel="alternate"; type="text/markdown"`);
   return response;
+}
+
+/** The text/markdown representation, unconditionally — for `.md` sibling routes that don't negotiate. */
+export function markdownResponse(body: string): Response {
+  return new Response(body, { headers: { "Content-Type": "text/markdown; charset=utf-8" } });
 }
 
 function addVary(response: Response, value: string): void {

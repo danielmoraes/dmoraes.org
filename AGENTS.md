@@ -51,15 +51,19 @@ A test asserts the first. See
 replace that with a flat reverse-chronological list.
 
 **Every page carries the same `SiteNav`** (`app/ui/site-nav.tsx`), right after
-its own `<h1>`: all three sections, always, same order — the current one
-renders as plain text (not a link), the other two as live links. Don't go
-back to omitting the current section from the set: that was tried first and
-read as broken rather than as a location marker. It replaced one-off
-"← Home" / "← Posts" links at the bottom of a page — don't reintroduce those
-either. The footer stays contact-only (Twitter, email, GitHub, LinkedIn,
-theme toggle); don't add section links there. `/privacy` deliberately isn't
-in SiteNav or the footer either — it's a utility page, not one of the site's
-three sections; it's reachable via the sitemap, `llms.txt`, and direct links.
+its own `<h1>` — no exceptions, including utility pages like the 404 and
+`/privacy` that aren't one of the three sections themselves. All three
+sections, always, same order — the current one renders as plain text (not a
+link), the other two as live links; `current` is optional, and on a page
+that isn't one of the three sections, all three render as plain links since
+none of them is current. Don't go back to omitting the current section from
+the set: that was tried first and read as broken rather than as a location
+marker. It replaced one-off "← Home" / "← Posts" links at the bottom of a
+page — don't reintroduce those either. The footer stays contact-only
+(Twitter, email, GitHub, LinkedIn, theme toggle); don't add section links
+there. `/privacy` still isn't one of SiteNav's three sections or in the
+footer — it's reachable via the sitemap, `llms.txt`, and direct links, same
+as before, just with SiteNav on the page now too.
 
 **`NODE_ENV=test` disables the asset watcher.** Without it the watcher holds
 the process open and the test runner hangs instead of exiting.
@@ -83,6 +87,17 @@ carries `Vary: Accept`, on both representations, not just the negotiated
 one. A route that gets real content added later (new prose page) should
 negotiate too; a route that's already structured data (feed, sitemap) has no
 reason to.
+
+**Posts and Quotes also ship standalone `.md` sibling routes**
+(`/posts.md`, `/posts/:slug.md`, `/quotes.md` — see `routes.ts`) alongside
+content negotiation, not instead of it: some agents follow links rather
+than set an `Accept` header, kentcdodds.com and kody.codes both do the same
+pairing. Every HTML page with a sibling advertises it via
+`LayoutProps.markdownHref` (a `<link rel="alternate">` tag) and
+`respondNegotiated`'s third argument (a matching `Link` response header).
+Home and `/privacy` deliberately don't have `.md` siblings — content
+negotiation already covers them, and there's no natural filename for the
+root path.
 
 ## Testing
 

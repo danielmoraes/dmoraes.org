@@ -7,7 +7,7 @@ import { createFileResponse } from "remix/response/file";
 
 import { loadPosts } from "../data/posts.ts";
 import { routes } from "../routes.ts";
-import { respondNegotiated } from "../utils/negotiate.ts";
+import { markdownResponse, respondNegotiated } from "../utils/negotiate.ts";
 import { renderAtomFeed, renderSitemap } from "./feeds.ts";
 import { HOME_MARKDOWN, HomePage } from "./home-page.tsx";
 import { PRIVACY_MARKDOWN, PrivacyPage } from "./privacy-page.tsx";
@@ -35,10 +35,19 @@ export default createController(routes, {
     },
 
     quotes(context) {
-      return respondNegotiated(context.request, {
-        html: () => context.render(<QuotesPage />),
-        markdown: quotesMarkdown,
-      });
+      return respondNegotiated(
+        context.request,
+        {
+          html: () => context.render(<QuotesPage />),
+          markdown: quotesMarkdown,
+        },
+        routes.quotesMarkdown.href(),
+      );
+    },
+
+    /** The standalone .md sibling of `quotes` — see app/utils/negotiate.ts. */
+    quotesMarkdown() {
+      return markdownResponse(quotesMarkdown());
     },
 
     privacy(context) {

@@ -1,10 +1,12 @@
 import { routes } from "../routes.ts";
 import { Layout } from "../ui/layout.tsx";
+import { SiteNav } from "../ui/site-nav.tsx";
 
 /**
- * Not in SiteNav or the footer on purpose — it's a utility page, not one of
- * the site's three sections, and the footer stays contact-only (see
- * AGENTS.md). Reachable via sitemap.xml, llms.txt, and this direct link.
+ * Not in SiteNav's three sections or the footer on purpose — it's a utility
+ * page, and the footer stays contact-only (see AGENTS.md). It does carry
+ * SiteNav itself, like every other page, just with no section marked
+ * current. Reachable via sitemap.xml, llms.txt, and this direct link.
  */
 export function PrivacyPage() {
   return () => (
@@ -14,6 +16,8 @@ export function PrivacyPage() {
       description="What this site collects, and what it doesn't."
     >
       <h1>Privacy</h1>
+
+      <SiteNav />
 
       <p>
         This site collects very little. Page views and rough visitor counts are measured with{" "}

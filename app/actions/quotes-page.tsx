@@ -18,6 +18,7 @@ export function QuotesPage() {
       title="Quotes"
       path={routes.quotes.href()}
       description="Quotations Daniel Bastos Moraes keeps coming back to."
+      markdownHref={routes.quotesMarkdown.href()}
     >
       <h1>Quotes</h1>
 

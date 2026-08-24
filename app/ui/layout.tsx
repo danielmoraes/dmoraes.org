@@ -13,6 +13,14 @@ export interface LayoutProps {
   description?: string;
   /** Absolute path of the current page, used for the canonical URL. */
   path?: string;
+  /**
+   * Path of this page's standalone `.md` sibling, if it has one (e.g.
+   * `/posts/foo.md`) — rendered as a discovery `<link>`. Content
+   * negotiation (see app/utils/negotiate.ts) already serves Markdown from
+   * the canonical URL without this; it's a complementary discovery path
+   * for agents that follow links rather than send an Accept header.
+   */
+  markdownHref?: string;
 }
 
 const SITE_NAME = "Daniel Bastos Moraes";
@@ -37,7 +45,13 @@ const THEME_COLOR_DARK = "#161615";
 
 export function Layout(handle: Handle<LayoutProps>) {
   return () => {
-    let { children, title, description = DEFAULT_DESCRIPTION, path = "/" } = handle.props;
+    let {
+      children,
+      title,
+      description = DEFAULT_DESCRIPTION,
+      path = "/",
+      markdownHref,
+    } = handle.props;
     let fullTitle = title ? `${title} — ${SITE_NAME}` : SITE_NAME;
 
     return (
@@ -76,6 +90,7 @@ export function Layout(handle: Handle<LayoutProps>) {
           <meta property="og:type" content="website" />
           <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
           <link rel="alternate" type="application/atom+xml" title={SITE_NAME} href="/feed.xml" />
+          {markdownHref && <link rel="alternate" type="text/markdown" href={markdownHref} />}
           {/* Vercel Web Analytics' plain-script integration, not the
               @vercel/analytics React package — this site has no client
               hydration to hang a component on. Vercel serves this path

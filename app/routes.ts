@@ -5,9 +5,12 @@ export const routes = route({
   home: "/",
   posts: {
     index: "/posts",
+    indexMarkdown: get("/posts.md"),
     show: "/posts/:slug",
+    showMarkdown: get("/posts/:slug.md"),
   },
   quotes: "/quotes",
+  quotesMarkdown: get("/quotes.md"),
   privacy: "/privacy",
   feed: get("/feed.xml"),
   sitemap: get("/sitemap.xml"),

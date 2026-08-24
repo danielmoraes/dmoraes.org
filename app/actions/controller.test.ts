@@ -79,6 +79,18 @@ describe("site nav", () => {
     let body = await fetchPath(routes.quotes.href()).then((response) => response.text());
     assert.equal(/←/.test(body), false);
   });
+
+  it("also appears on pages that aren't one of the three sections, with none marked current", async () => {
+    let notFound = await fetchPath("/nope").then((response) => response.text());
+    let privacy = await fetchPath(routes.privacy.href()).then((response) => response.text());
+
+    for (let body of [notFound, privacy]) {
+      assert.match(body, /href="\/"/);
+      assert.match(body, /href="\/posts"/);
+      assert.match(body, /href="\/quotes"/);
+      assert.equal(body.includes("aria-current"), false);
+    }
+  });
 });
 
 describe("theme toggle", () => {
@@ -149,6 +161,38 @@ describe("markdown content negotiation", () => {
       "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8";
     let response = await fetchPath(routes.home.href(), { Accept: chrome });
     assert.match(response.headers.get("Content-Type") ?? "", /text\/html/);
+  });
+});
+
+describe(".md sibling routes", () => {
+  it("serve markdown unconditionally on quotes and posts, regardless of Accept", async () => {
+    let quotes = await fetchPath(routes.quotesMarkdown.href(), { Accept: "text/html" });
+    let postsIndex = await fetchPath(routes.posts.indexMarkdown.href(), { Accept: "text/html" });
+    let post = await fetchPath(
+      routes.posts.showMarkdown.href({ slug: "stop-putting-off-your-decisions" }),
+    );
+
+    for (let response of [quotes, postsIndex, post]) {
+      assert.match(response.headers.get("Content-Type") ?? "", /text\/markdown/);
+    }
+    assert.match(await post.text(), /^# Stop putting off your decisions/);
+  });
+
+  it("404s a post .md sibling for an unknown slug", async () => {
+    let response = await fetchPath(routes.posts.showMarkdown.href({ slug: "no-such-post" }));
+    assert.equal(response.status, 404);
+  });
+
+  it("is advertised from the HTML page via Link header and <link rel=alternate>, only where a sibling exists", async () => {
+    let posts = await fetchPath(routes.posts.index.href());
+    let body = await posts.text();
+
+    assert.match(posts.headers.get("Link") ?? "", /rel="alternate"; type="text\/markdown"/);
+    assert.match(body, /rel="alternate" type="text\/markdown" href="\/posts\.md"/);
+
+    // Home has no .md sibling — nothing to advertise.
+    let home = await fetchPath(routes.home.href());
+    assert.equal(home.headers.has("Link"), false);
   });
 });
 

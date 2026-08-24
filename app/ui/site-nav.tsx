@@ -12,8 +12,12 @@ const SECTIONS: Array<{ id: NavSection; label: string; href: string }> = [
 ];
 
 export interface SiteNavProps {
-  /** The section this page belongs to. */
-  current: NavSection;
+  /**
+   * The section this page belongs to. Omit on pages that aren't one of the
+   * three sections (404, privacy) — all three then render as plain links,
+   * since none of them is "current."
+   */
+  current?: NavSection;
 }
 
 /**

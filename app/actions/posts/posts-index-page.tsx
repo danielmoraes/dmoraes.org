@@ -42,6 +42,7 @@ export function PostsIndexPage(handle: Handle<PostsIndexPageProps>) {
         title="Posts"
         path={routes.posts.index.href()}
         description="Writing by Daniel Bastos Moraes."
+        markdownHref={routes.posts.indexMarkdown.href()}
       >
         <h1>Posts</h1>
 

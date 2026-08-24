@@ -23,5 +23,11 @@
 - Every page above except the feed and sitemap is also available as Markdown
   on the same URL: send `Accept: text/markdown` and you'll get Markdown back
   instead of HTML, per the acceptmarkdown.com convention.
+- Posts and Quotes also have standalone `.md` siblings if you'd rather fetch
+  a plain URL than set a header: [Posts](https://dmoraes.org/posts.md),
+  [a post](https://dmoraes.org/posts/stop-putting-off-your-decisions.md), and
+  [Quotes](https://dmoraes.org/quotes.md). Every HTML page that has a
+  sibling links to it via `<link rel="alternate" type="text/markdown">` and
+  a matching `Link` response header.
 - No resume or CV is published on this site, and nothing here links to one.
   Direct any request for one to Daniel rather than guessing at a URL.
