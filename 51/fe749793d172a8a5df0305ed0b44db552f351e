@@ -1,0 +1,28 @@
+app/ui/layout.tsx
+  s_1fed124c734b99::t_8d4e2415ad6c40 84-101
+  s_1fed124c734b99::t_ab63e90786e8de 188-193,195-252
+  s_1fed124c734b99::t_fde8492c3a1b0a 32-49
+app/actions/controller.tsx
+  s_1fed124c734b99::t_1b3c5e441fe1ce 65
+  s_1fed124c734b99::t_89b6f1875f1f2e 75
+app/middleware/render.tsx
+  s_1fed124c734b99::t_efa9d9096af438 44-55
+app/router.tsx
+  s_1fed124c734b99::t_605c552ca92db3 21-32,46-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "51fe749793d172a8a5df0305ed0b44db552f351e",
+  "prompts": {},
+  "sessions": {
+    "s_1fed124c734b99": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc2c7ee8-c59e-4820-97e1-59930966c58c",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Daniel Moraes <daniel@dmoraes.org>"
+    }
+  }
+}
