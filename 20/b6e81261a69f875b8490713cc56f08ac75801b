@@ -1,0 +1,21 @@
+app/actions/controller.tsx
+  s_56cc82a89d860d::t_f3e031de0e20f0 16-20,22
+app/middleware/render.tsx
+  s_56cc82a89d860d::t_a2d5c50968d690 18-22,30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "20b6e81261a69f875b8490713cc56f08ac75801b",
+  "prompts": {},
+  "sessions": {
+    "s_56cc82a89d860d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7d26fe1b-ed48-4591-b2be-377a341d2de1",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Daniel Moraes <daniel@dmoraes.org>"
+    }
+  }
+}
