@@ -18,7 +18,18 @@ declare module "remix/router" {
 }
 
 export const router = createRouter<AppContext>({
-  middleware: [compression(), staticFiles("./public", { index: false }), render()],
+  middleware: [
+    compression(),
+    // Hashed filenames (content hash in the name) — safe to pin forever.
+    staticFiles("./public", {
+      index: false,
+      filter: (path) => path.startsWith("fonts/"),
+      cacheControl: "public, max-age=31536000, immutable",
+    }),
+    // Everything else has a stable name, so revalidate daily instead.
+    staticFiles("./public", { index: false, cacheControl: "public, max-age=86400" }),
+    render(),
+  ],
   // Agent-friendly: a real 404, with a body an agent can actually use to
   // recover, rather than the framework's bare "Not Found: /path" text. Not
   // used by the resume route's own 404 — that one stays a plain, identical
@@ -32,6 +43,9 @@ export const router = createRouter<AppContext>({
 
     let headers = new Headers(response.headers);
     headers.set("X-Robots-Tag", "noindex");
+    // Override render()'s shared edge-cache default — a typo'd URL must
+    // never get pinned at the edge as a 404.
+    headers.set("Cache-Control", "private, no-store, max-age=0, must-revalidate");
     return new Response(response.body, { status: 404, headers });
   },
 });

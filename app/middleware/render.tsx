@@ -41,7 +41,18 @@ export function render() {
           },
         });
 
-        return createHtmlResponse(stream, init);
+        let headers = new Headers(init?.headers);
+        // Every page is fully static per URL — nothing here is personalized,
+        // the theme toggle is client-side only — so let Vercel's edge serve
+        // it and skip invoking this function on a cache hit. `max-age=0`
+        // still makes the browser revalidate on every visit, so a content
+        // edit shows up on reload. The 404 handler overrides this back to
+        // `no-store` — see router.tsx.
+        headers.set(
+          "Cache-Control",
+          "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
+        );
+        return createHtmlResponse(stream, { ...init, headers });
       },
   );
 }

@@ -62,7 +62,7 @@ export default createController(routes, {
       return new Response(renderAtomFeed(posts), {
         headers: {
           "Content-Type": "application/atom+xml; charset=utf-8",
-          "Cache-Control": "public, max-age=3600",
+          "Cache-Control": "public, max-age=3600, s-maxage=86400",
         },
       });
     },
@@ -72,7 +72,7 @@ export default createController(routes, {
       return new Response(renderSitemap(posts), {
         headers: {
           "Content-Type": "application/xml; charset=utf-8",
-          "Cache-Control": "public, max-age=3600",
+          "Cache-Control": "public, max-age=3600, s-maxage=86400",
         },
       });
     },

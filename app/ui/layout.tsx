@@ -29,13 +29,24 @@ const SITE_URL = "https://dmoraes.org";
 export const DEFAULT_DESCRIPTION =
   "Daniel Bastos Moraes works at Form Factory, leading the engineering team building headless commerce for enterprise brands. Previously computer vision at Samsung Research, and a Master of Computer Science at Unicamp.";
 
-// IBM Plex Sans for body, Newsreader for the headline — loaded below via
-// Google Fonts. Deliberately not Jarred Sumner's pairing (DM Sans / Crimson
-// Pro): same idea — serif headline over a clean sans body — different fonts.
-const SANS = '"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
-const SERIF = '"Newsreader", Georgia, "Times New Roman", serif';
-const FONTS_HREF =
-  "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap";
+// IBM Plex Sans for body, Newsreader for the headline — self-hosted latin
+// subsets in public/fonts/ (site content is ASCII plus "—" and "í", both in
+// the latin unicode-range — re-check with `grep -rhoP '[^\x00-\x7F]' content/
+// app/` before this stops being true). Each is paired with a "Fallback" face
+// below carrying fontpie-generated metric overrides, so the swap from system
+// font to webfont doesn't shift layout. Deliberately not Jarred Sumner's
+// pairing (DM Sans / Crimson Pro): same idea — serif headline over a clean
+// sans body — different fonts.
+const SANS =
+  '"IBM Plex Sans", "IBM Plex Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+const SERIF = '"Newsreader", "Newsreader Fallback", Georgia, "Times New Roman", serif';
+
+// Filenames carry a content hash (no build step fingerprints these for us) —
+// see AGENTS.md's static-asset conventions and Fix 2 in the Lighthouse plan
+// for why fonts/ gets pinned `immutable` in router.tsx.
+const FONT_SANS_400 = "/fonts/ibm-plex-sans-400.aedeae14.woff2";
+const FONT_SANS_600 = "/fonts/ibm-plex-sans-600.2f66ab50.woff2";
+const FONT_SERIF_600 = "/fonts/newsreader-600.f0a562e8.woff2";
 
 // Single source of truth for --bg in both themes, so the theme-color meta
 // (colors the mobile browser chrome) can't drift from the page background —
@@ -70,9 +81,24 @@ export function Layout(handle: Handle<LayoutProps>) {
               media query still drives it. */}
           <script innerHTML={THEME_INIT_SCRIPT} />
           <style innerHTML={THEME_TOKENS_CSS} />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link rel="stylesheet" href={FONTS_HREF} />
+          {/* Only the two faces that paint above the fold — not the 600
+              sans, `h2` is below the fold on every page. `crossOrigin` is
+              required here even though the fonts are same-origin: without it
+              the browser fetches the file twice and the preload is wasted. */}
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href={FONT_SANS_400}
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href={FONT_SERIF_600}
+            crossOrigin="anonymous"
+          />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="color-scheme" content="light dark" />
           <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -159,7 +185,71 @@ function resizeIcon(svg: string): string {
  * Three layers, in order: system preference by default, `data-theme="dark"`
  * or `="light"` overrides it either direction once a visitor picks one.
  */
+// Same latin unicode-range Google Fonts itself serves this subset under —
+// keeps a future non-latin character (see the comment above SANS) from
+// silently rendering as tofu instead of falling through the stack.
+const LATIN_UNICODE_RANGE =
+  "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD";
+
 const THEME_TOKENS_CSS = `
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("${FONT_SANS_400}") format("woff2");
+  unicode-range: ${LATIN_UNICODE_RANGE};
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("${FONT_SANS_600}") format("woff2");
+  unicode-range: ${LATIN_UNICODE_RANGE};
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("${FONT_SERIF_600}") format("woff2");
+  unicode-range: ${LATIN_UNICODE_RANGE};
+}
+
+/* Metric-matched fallbacks (generated via \`npx fontpie\`) so the swap from
+   the local system font to the webfont above doesn't reflow the page. */
+@font-face {
+  font-family: "IBM Plex Sans Fallback";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Arial");
+  ascent-override: 101.35%;
+  descent-override: 27.19%;
+  line-gap-override: 0%;
+  size-adjust: 101.13%;
+}
+@font-face {
+  font-family: "IBM Plex Sans Fallback";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Arial Bold");
+  ascent-override: 105.50%;
+  descent-override: 28.30%;
+  line-gap-override: 0%;
+  size-adjust: 97.16%;
+}
+@font-face {
+  font-family: "Newsreader Fallback";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Times New Roman Bold");
+  ascent-override: 71.67%;
+  descent-override: 25.84%;
+  line-gap-override: 0%;
+  size-adjust: 102.56%;
+}
+
 html {
   --text: #1a1a1a;
   --muted: #6b6b6b;
