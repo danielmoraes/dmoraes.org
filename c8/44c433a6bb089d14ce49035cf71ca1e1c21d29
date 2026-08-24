@@ -1,0 +1,21 @@
+app/ui/layout.tsx
+  s_1fed124c734b99::t_26d34c17a7c40b 264-275
+AGENTS.md
+  s_1fed124c734b99::t_7446566193ddc5 10-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "c844c433a6bb089d14ce49035cf71ca1e1c21d29",
+  "prompts": {},
+  "sessions": {
+    "s_1fed124c734b99": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc2c7ee8-c59e-4820-97e1-59930966c58c",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Daniel Moraes <daniel@dmoraes.org>"
+    }
+  }
+}
