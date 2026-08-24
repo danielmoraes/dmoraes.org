@@ -1,0 +1,54 @@
+app/routes.ts
+  s_56cc82a89d860d::t_ada60289db8ad7 8,10,13
+app/actions/not-found-page.tsx
+  s_56cc82a89d860d::t_26e78c918de851 5,15-17,19-20
+app/actions/privacy-page.tsx
+  s_56cc82a89d860d::t_1f45c0c5cec78c 3,6-9,20
+  s_56cc82a89d860d::t_a0ac0efb631dd9 21
+app/utils/negotiate.ts
+  s_56cc82a89d860d::t_e7c7ea4665df25 76-77
+  s_56cc82a89d860d::t_c3fb4b353308c6 52-57,62,68-72,74,81-83
+  s_56cc82a89d860d::t_b2ce6bb444b834 84-85
+app/ui/site-nav.tsx
+  s_56cc82a89d860d::t_3e9268abad6240 15-20
+app/actions/posts/controller.tsx
+  s_56cc82a89d860d::t_e942cae9e225e2 4,6,13-26,32-46
+app/actions/posts/posts-index-page.tsx
+  s_56cc82a89d860d::t_4273470209efdc 45
+public/llms.txt
+  s_56cc82a89d860d::t_e96cdf86c22e4c 26-31
+app/actions/posts/post-page.tsx
+  s_56cc82a89d860d::t_e5e49a143e54db 14-22
+  s_56cc82a89d860d::t_d6e9d40eea92bf 32
+app/actions/controller.test.ts
+  s_56cc82a89d860d::t_680a586e9ecf60 82-93
+  s_56cc82a89d860d::t_83d0b0af78c744 167-198
+app/actions/quotes-page.tsx
+  s_56cc82a89d860d::t_58ff2c8bb1e0c9 21
+AGENTS.md
+  s_56cc82a89d860d::t_68a36b27f3d0c4 54-66
+  s_56cc82a89d860d::t_a7b9663590152b 91-101
+app/actions/controller.tsx
+  s_56cc82a89d860d::t_91ca9d47bc00b1 10
+  s_56cc82a89d860d::t_0213b4a77f6776 38-50
+app/ui/layout.tsx
+  s_56cc82a89d860d::t_e7c7ea4665df25 48-54
+  s_56cc82a89d860d::t_80049e59410626 93
+  s_56cc82a89d860d::t_0c2df2799fdb2b 16-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "0c03757587c56528e9e3af344231d2e0b097deb6",
+  "prompts": {},
+  "sessions": {
+    "s_56cc82a89d860d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7d26fe1b-ed48-4591-b2be-377a341d2de1",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Daniel Moraes <daniel@dmoraes.org>"
+    }
+  }
+}
