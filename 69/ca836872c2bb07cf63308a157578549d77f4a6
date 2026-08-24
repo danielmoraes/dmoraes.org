@@ -1,0 +1,73 @@
+app/actions/home-page.tsx
+  s_56cc82a89d860d::t_93f71ba271c8ff 2,5-20,24
+app/actions/posts/posts-index-page.tsx
+  s_56cc82a89d860d::t_dab898917ff6c4 14-30
+app/routes.ts
+  s_56cc82a89d860d::t_da1ed25027023c 11
+app/router.tsx
+  s_56cc82a89d860d::t_af6c653d1680a7 6,10,22-36
+app/actions/privacy-page.tsx
+  s_56cc82a89d860d::t_919c9973a24eff 26-29
+  s_56cc82a89d860d::t_ae7c630cb29a0f 1-25,30-55
+app/actions/feeds.ts
+  s_56cc82a89d860d::t_772aa1a46a36b8 53
+app/actions/quotes-page.tsx
+  s_56cc82a89d860d::t_cb0428c7d93859 8-13
+public/llms.txt
+  s_56cc82a89d860d::t_aaab653ca16d77 1-27
+app/actions/controller.tsx
+  s_56cc82a89d860d::t_33d41e50bfa362 44-48
+  s_56cc82a89d860d::t_f4c3cc54c7cc57 31-34,38-41
+  s_56cc82a89d860d::t_e97a82a96ce70b 10,12,14
+  s_56cc82a89d860d::t_4d79eac915db5b 13
+  s_56cc82a89d860d::t_31c8247383d4e1 42-43
+app/actions/not-found-page.tsx
+  s_56cc82a89d860d::t_8c307bb93aaf4a 1,10,15-18
+  s_56cc82a89d860d::t_6b0cee429db2e6 2-9,11-14,19-36
+app/actions/posts/controller.test.ts
+  s_56cc82a89d860d::t_1ad3bc708cb227 59-70
+  s_56cc82a89d860d::t_405ff7fa591e81 4
+  s_56cc82a89d860d::t_10ee2a0164ec34 9-10
+app/ui/person-schema.tsx
+  s_56cc82a89d860d::t_fff31c20131701 1-2,13
+  s_56cc82a89d860d::t_85eb53a8ff8a7f 3-12,14-26,28
+  s_56cc82a89d860d::t_392d00c8aba041 27
+app/utils/negotiate.test.ts
+  s_56cc82a89d860d::t_50d90e97a1a6df 1-47
+app/actions/posts/controller.tsx
+  s_56cc82a89d860d::t_703fe0ad7991ff 4-5,8,14-17,23-29
+server.ts
+  s_56cc82a89d860d::t_405ff7fa591e81 4
+app/ui/layout.tsx
+  s_56cc82a89d860d::t_b017c8ae557727 77
+  s_56cc82a89d860d::t_2ac74b28dc10f0 20-22
+app/actions/resume.test.ts
+  s_56cc82a89d860d::t_405ff7fa591e81 18
+app/actions/controller.test.ts
+  s_56cc82a89d860d::t_405ff7fa591e81 4
+  s_56cc82a89d860d::t_87c0b1a323c73e 9-10
+  s_56cc82a89d860d::t_279eaf7e4392b5 116,120-219
+app/utils/negotiate.ts
+  s_56cc82a89d860d::t_ccde60a53953a6 47-82
+  s_56cc82a89d860d::t_c5c5fd4bb9f34d 3-7,20-23
+  s_56cc82a89d860d::t_c9cd266d0eb9a9 1-2,8-19,24-46,83-140
+AGENTS.md
+  s_56cc82a89d860d::t_ffe5e0b414b8da 30-31,35,37
+  s_56cc82a89d860d::t_ee3f6d050ef602 59-62,75-85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "69ca836872c2bb07cf63308a157578549d77f4a6",
+  "prompts": {},
+  "sessions": {
+    "s_56cc82a89d860d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7d26fe1b-ed48-4591-b2be-377a341d2de1",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Daniel Moraes <daniel@dmoraes.org>"
+    }
+  }
+}
