@@ -288,6 +288,9 @@ describe("contact page", () => {
     assert.match(htmlBody, /"name":"Devord"/);
     assert.match(htmlBody, /"email":"contact@devord\.com"/);
     assert.match(htmlBody, /"contactType":"sales"/);
+    assert.match(htmlBody, /"@type":"PostalAddress"/);
+    assert.match(htmlBody, /"postalCode":"01311-000"/);
+    assert.match(htmlBody, /"addressCountry":"BR"/);
   });
 });
 

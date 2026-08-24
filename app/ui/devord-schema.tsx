@@ -21,6 +21,14 @@ const DEVORD_SCHEMA = {
     email: "contact@devord.com",
     contactType: "sales",
   },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Av. Paulista, 171, andar 4 - Bela Vista",
+    addressLocality: "São Paulo",
+    addressRegion: "SP",
+    postalCode: "01311-000",
+    addressCountry: "BR",
+  },
 };
 
 export function DevordSchema() {
