@@ -207,7 +207,7 @@ const THEME_TOKENS_CSS = `
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
+  font-display: fallback;
   src: url("${FONT_SANS_400}") format("woff2");
   unicode-range: ${LATIN_UNICODE_RANGE};
 }
@@ -215,7 +215,7 @@ const THEME_TOKENS_CSS = `
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 600;
-  font-display: optional;
+  font-display: fallback;
   src: url("${FONT_SANS_600}") format("woff2");
   unicode-range: ${LATIN_UNICODE_RANGE};
 }
@@ -223,7 +223,7 @@ const THEME_TOKENS_CSS = `
   font-family: "Newsreader";
   font-style: normal;
   font-weight: 600;
-  font-display: optional;
+  font-display: fallback;
   src: url("${FONT_SERIF_600}") format("woff2");
   unicode-range: ${LATIN_UNICODE_RANGE};
 }
